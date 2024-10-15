@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Azz Internet Hub</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Link to your CSS -->
+    <script>
+        function updateDateTimeAndLocation() {
+            // Update Date and Time
+            const now = new Date();
+            const options = { 
+                weekday: 'long', year: 'numeric', month: 'long', 
+                day: 'numeric', hour: '2-digit', minute: '2-digit', 
+                second: '2-digit', hour12: true 
+            };
+            const dateTimeString = now.toLocaleString('en-US', options);
+            document.getElementById('date-time').innerHTML = dateTimeString;
+
+            // Get User Location
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(position => {
+                    const latitude = position.coords.latitude;
+                    const longitude = position.coords.longitude;
+
+                    // Fetching location from a public API
+                    fetch(`https://api.bigdatacloud.net/data/reverse-geocode-client?latitude=${latitude}&longitude=${longitude}&localityLanguage=en`)
+                        .then(response => response.json())
+                        .then(data => {
+                            const location = data.city || data.locality || data.principalSubdivision || "Your location is unknown";
+                            document.getElementById('user-location').innerHTML = `Location: ${location}`;
+                        });
+                });
+            } else {
+                document.getElementById('user-location').innerHTML = "Geolocation is not supported by this browser.";
+            }
+        }
+
+        window.onload = updateDateTimeAndLocation; // Update date, time, and location when the page loads
+    </script>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="zaroo.jpg" alt="AZZ Internet Hub Logo">
+        </div>
+        <h1>Welcome to AZZ INTERNET HUB</h1>
+        <p>Your one-stop online internet cafe for quick solutions!<br><em>#FORGE YOUR DIGITAL DESTINY WITH AZZ INTERNET HUB</em></p>
+        <div id="date-time" style="font-size: 18px; margin-top: 10px;"></div> <!-- Placeholder for date and time -->
+        <div id="user-location" style="font-size: 18px; margin-top: 10px;"></div> <!-- Placeholder for user location -->
+    </header>
+    
+    <div class="about">
+        <h2>About Us</h2>
+        <p>AZZ INTERNET HUB is an online internet cafe. This is where you can bring all your deals about anything that is done online and get quick solutions. We do every online work at the coolest rate.<br>If what you want is not listed here, kindly reach out to us on our social media handles provided</p>
+    </div>
+
+    <div class="services">
+        <h2>Our Services</h2>
+        <ul class="service-list">
+            <li>
+                <div class="service-info">
+                    <strong>Professional Web Design:</strong>GH₵300-GH₵100 
+                </div>
+                <a href="https://wa.me/233598160732" target="_blank" class="btn contact-btn">Contact Us</a>
+            </li>
+            <li>
+                <div class="service-info">
+                    <strong>KNUST APPLICATION</strong>GH₵288.00  
+                </div>
+                <a href="https://wa.me/233598160732" target="_blank" class="btn contact-btn">Contact Us</a>
+            </li>
+            <li>
+                <div class="service-info">
+                    <strong>University of Ghana</strong>GH₵247.00 
+                </div>
+                <a href="https://wa.me/233598160732" target="_blank" class="btn contact-btn">Contact Us</a>
+            </li>
+            <li>
+                <div class="service-info">
+                    <strong>UHAS</strong>GH₵247.00 
+                </div>
+                <a href="https://wa.me/233598160732" target="_blank" class="btn contact-btn">Contact Us</a>
+            </li>
+            <li>
+                <div class="service-info">
+                    <strong>UNER</strong>GH₵258.00
+                </div>
+                <a href="https://wa.me/233598160732" target="_blank" class="btn contact-btn">Contact Us</a>
+            </li>
+            <li>
+                <div class="service-info">
+                    <strong>WAEC Results Checking:</strong>GH₵20.00 
+                </div>
+                <a href="https://wa.me/233598160732" target="_blank" class="btn contact-btn">Contact Us</a>
+            </li>
+            <li>
+                <div class="service-info">
+                    <strong>Business Card Creation:</strong>GH₵20.00 
+                </div>
+                <a href="https://wa.me/233598160732" target="_blank" class="btn contact-btn">Contact Us</a>
+            </li>
+            <li>
+                <div class="service-info">
+                    <strong>Wedding or Funeral Poster:</strong>GH₵30.00 
+                </div>
+                <a href="https://wa.me/233598160732" target="_blank" class="btn contact-btn">Contact Us</a>
+            </li>
+            <li>
+                <div class="service-info">
+                    <strong>Passport Picture:</strong>GH₵15.00 
+                </div>
+                <a href="https://wa.me/233598160732" target="_blank" class="btn contact-btn">Contact Us</a>
+            </li>
+            <li>
+                <div class="service-info">
+                    <strong>Other Online Forms Filling:</strong>Varies 
+                </div>
+                <a href="https://wa.me/233598160732" target="_blank" class="btn contact-btn">Contact Us</a>
+            </li>
+            <li>
+                <div class="service-info">
+                    <strong>American Lottery(passport picture):</strong> GH₵15.00
+                </div>
+                <a href="https://wa.me/233598160732" target="_blank" class="btn contact-btn">Contact Us</a>
+            </li>
+            <li>
+                <div class="service-info">
+                    <strong>Online Coding Lessons:</strong>Varies 
+                </div>
+                <a href="https://wa.me/233598160732" target="_blank" class="btn contact-btn">Contact Us</a>
+            </li>
+        </ul>
+    </div>
+
+    <div class="contact">
+        <h2>Contact Us</h2>
+        <p>We are always open. Location doesn’t matter.</p>
+        <div class="social-links">
+            <a href="https://wa.me/233598160732" target="_blank" class="social-btn whatsapp">WhatsApp</a>
+            <a href="https://www.tiktok.com/@abdul_aziz_zaroo?_t=8qZ4OOS8M0j&_r=1" target="_blank" class="social-btn tiktok">TikTok</a>
+            <a href="https://www.facebook.com/profile.php?id=100063787636760&mibextid=LQQJ4d" target="_blank" class="social-btn facebook">Facebook</a>
+            <a href="https://youtube.com/@aihdeengems?si=GZWHyHhT87Wkpyxp" target="_blank" class="social-btn youtube">YouTube</a>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 AZZ Internet Hub. All rights reserved.</p>
+    </footer>
+</body>
+</html>
