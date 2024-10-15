@@ -1,3 +1,228 @@
+/* Rate Us Section */
+.rate-us {
+    background-color: #f0f0f0;
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 600px;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.rate-us h2 {
+    margin-bottom: 10px;
+    color: #001f3f; /* Dark navy blue */
+}
+
+.rate-us form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.rate-us select {
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
+
+.rate-btn {
+    background-color: #28a745; /* Green */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.rate-btn:hover {
+    background-color: #218838;
+}
+
+/* Subscribe to Our Newsletter Section */
+.subscribe {
+    background-color: #001f3f; /* Dark navy blue */
+    color: white;
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 600px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.subscribe p {
+    margin-bottom: 15px;
+}
+
+.subscribe form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.subscribe input[type="email"] {
+    padding: 10px;
+    width: 80%;
+    margin-bottom: 10px;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+}
+
+.subscribe-btn {
+    background-color: #ff5722; /* Bright orange */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.subscribe-btn:hover {
+    background-color: #e64a19;
+}
+
+
+
+/* Add these styles to your existing CSS */
+
+/* Modal styles */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1000; /* Sit on top */
+    padding-top: 60px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    background-color: rgba(0, 0, 0, 0.8); /* Black background with opacity */
+}
+
+.modal-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    border-radius: 10px;
+}
+
+.modal-content:hover {
+    cursor: pointer;
+}
+
+.close {
+    position: absolute;
+    top: 20px;
+    right: 35px;
+    color: white;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Image styles */
+.gallery-image {
+    width: 100px;
+    height: 100px;
+    margin: 10px;
+    border-radius: 8px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.gallery-image:hover {
+    transform: scale(1.1); /* Slight zoom on hover */
+}
+/* Add these styles to your existing CSS */
+
+/* Meter Section */
+.meter-section {
+    margin: 20px auto;
+    max-width: 800px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.meter-section h2 {
+    color: #001f3f; /* Dark navy blue heading color */
+}
+
+/* Image Section */
+.image-section {
+    margin: 20px auto;
+    max-width: 800px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.gallery-image {
+    width: 100px;
+    height: 100px;
+    margin: 10px;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+/* News Section */
+.news-section {
+    margin: 20px auto;
+    max-width: 800px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.news-section h2 {
+    color: #001f3f;
+}
+
+/* Search Bar Section */
+.search-section {
+    margin: 20px auto;
+    max-width: 800px;
+    text-align: center;
+}
+
+.search-input {
+    width: 300px;
+    padding: 10px;
+    border: 2px solid #001f3f;
+    border-radius: 8px;
+}
+
+.search-btn {
+    padding: 10px 20px;
+    background-color: #001f3f;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+.search-btn:hover {
+    background-color: #004080;
+}
+
+
+
+
+//end//
+
 * {
     margin: 0;
     padding: 0;
