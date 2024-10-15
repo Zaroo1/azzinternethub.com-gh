@@ -1,0 +1,145 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f9f9f9; /* Light background for contrast */
+    color: #333; /* Dark text for readability */
+}
+
+header {
+    background: #001f3f; /* Dark navy blue header background color */
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.logo img {
+    width: 150px; /* Adjust logo size */
+    margin-bottom: 10px;
+}
+
+.about {
+    padding: 20px;
+    background: white;
+    margin: 20px auto;
+    max-width: 800px; /* Limit the width */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.services {
+    padding: 20px;
+    background: white;
+    margin: 20px auto;
+    max-width: 800px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    color: #001f3f; /* Dark navy blue heading color */
+    margin-bottom: 15px;
+}
+
+.service-list {
+    list-style-type: none; /* Remove default list styling */
+    padding: 0; /* Remove default padding */
+}
+
+.service-list li {
+    padding: 10px;
+    border-bottom: 1px solid #ddd; /* Separator line between services */
+    display: flex;
+    justify-content: space-between; /* Space between service info and button */
+    align-items: center; /* Center vertically */
+}
+
+.service-list li:last-child {
+    border-bottom: none; /* Remove border from last item */
+}
+
+.service-info {
+    flex: 1; /* Allow the service info to take available space */
+}
+
+.btn {
+    display: inline-block; /* Treat link as block */
+    padding: 10px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    color: white; /* Text color */
+    font-weight: bold;
+    transition: background 0.3s ease; /* Smooth background transition */
+}
+
+.contact-btn {
+    background-color: #28a745; /* Green button color */
+}
+
+.contact-btn:hover {
+    background-color: #218838; /* Darker green on hover */
+}
+
+.social-links {
+    display: flex;
+    justify-content: center; /* Center social links */
+    margin: 20px 0; /* Margin for spacing */
+}
+
+.social-btn {
+    display: inline-block; /* Treat link as block */
+    padding: 10px 15px;
+    margin: 0 10px; /* Spacing between buttons */
+    border-radius: 5px;
+    text-decoration: none;
+    color: white; /* Text color */
+    font-weight: bold;
+    transition: background 0.3s ease; /* Smooth background transition */
+}
+
+.whatsapp {
+    background-color: #25D366; /* WhatsApp color */
+}
+
+.whatsapp:hover {
+    background-color: #128C7E; /* Darker green on hover */
+}
+
+.tiktok {
+    background-color: #69C9D0; /* TikTok color */
+}
+
+.tiktok:hover {
+    background-color: #44A6A4; /* Darker teal on hover */
+}
+
+.facebook {
+    background-color: #3b5998; /* Facebook color */
+}
+
+.facebook:hover {
+    background-color: #2e5b85; /* Darker blue on hover */
+}
+
+.youtube {
+    background-color: #FF0000; /* YouTube color */
+}
+
+.youtube:hover {
+    background-color: #CC0000; /* Darker red on hover */
+}
+
+footer {
+    text-align: center;
+    padding: 20px 0;
+    background: #001f3f; /* Dark navy blue footer background color */
+    color: white;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
