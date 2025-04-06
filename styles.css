@@ -348,3 +348,51 @@ footer {
 .search-btn {
     padding: 10px 20px;
     background-color: #001
+
+
+
+
+/* Books Section */
+/* Books Section */
+/* Style for the book container */
+.books {
+  text-align: center;
+  padding: 20px;
+  background-color: #f9f9f9;
+}
+
+.books h2 {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #2c3e50;
+  margin-bottom: 20px;
+}
+
+/* Updated image style: smaller and centered */
+.books img {
+  width: 250px; /* smaller fixed width */
+  max-width: 80%;
+  height: auto;
+  margin: 10px auto;
+  display: block;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Button style */
+.view-button {
+  display: inline-block;
+  padding: 10px 20px;
+  margin-top: 15px;
+  background-color: #3498db;
+  color: white;
+  font-size: 16px;
+  text-decoration: none;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.view-button:hover {
+  background-color: #217dbb;
+  transform: translateY(-2px);
+}
