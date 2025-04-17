@@ -1,0 +1,141 @@
+/* File: schoolsavailable.css */
+
+/* — your color palette — */
+:root {
+  --navy:        #002147;          /* solid header */
+  --white:       #ffffff;
+  --gradient-a:  #4a90e2;
+  --gradient-b:  #9013fe;
+  --grey-light:  #e0e0e0;
+  --shadow:      rgba(0,0,0,0.1);
+  --whatsapp:    #25D366;          /* WhatsApp green */
+}
+
+/* ===== HEADER ===== */
+.page-header {
+  background: var(--navy);
+  color: var(--white);
+  text-align: center;
+  padding: 2.5em 1em;
+  box-shadow: 0 4px 15px var(--shadow);
+  margin-bottom: 1em;
+}
+.page-header h1 {
+  margin: 0;
+  font-size: 2rem;
+}
+
+/* ===== ACTION BAR ===== */
+.page-actions {
+  text-align: center;
+  margin-bottom: 2em;
+}
+.btn-back {
+  display: inline-block;
+  padding: 0.75em 1.5em;
+  background: var(--white);
+  color: var(--navy);
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 50px;
+  box-shadow: 0 4px 10px var(--shadow);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.btn-back:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px var(--shadow);
+}
+
+/* ===== SCHOOLS LIST ===== */
+.schools-list {
+  max-width: 700px;
+  margin: 0 auto 3em;
+  background: var(--white);
+  border-radius: 12px;
+  box-shadow: 0 4px 15px var(--shadow);
+  overflow: hidden;
+}
+.schools-list ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.schools-list li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1em 1.5em;
+  border-bottom: 1px solid var(--grey-light);
+  background: var(--white);
+  transition: background 0.3s ease, color 0.3s ease;
+}
+.schools-list li:last-child {
+  border-bottom: none;
+}
+.schools-list li:hover {
+  background: linear-gradient(135deg, var(--gradient-a), var(--gradient-b));
+  color: var(--white);
+  cursor: default;
+}
+.schools-list li:hover .school-price {
+  color: var(--white);
+  font-weight: 600;
+}
+.school-name {
+  font-size: 1.1rem;
+}
+.school-price {
+  font-size: 1rem;
+  color: var(--gradient-b);
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+/* ===== FOOTER ===== */
+.page-footer {
+  background: var(--white);
+  text-align: center;
+  padding: 2em 1em;
+  color: #666;
+  font-size: 0.9rem;
+  box-shadow: 0 -2px 5px var(--shadow);
+}
+
+/* ===== FLOATING WHATSAPP BUTTON ===== */
+.whatsapp-float {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 60px;
+  height: 60px;
+  background: var(--whatsapp);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+  z-index: 1000;
+  text-decoration: none;
+}
+.whatsapp-float img {
+  width: 32px;
+  height: 32px;
+}
+
+
+/* ===== INFO BANNER ===== */
+.info-banner {
+  background: linear-gradient(135deg, var(--gradient-a), var(--gradient-b));
+  color: var(--white);
+  text-align: center;
+  padding: 1em;
+  font-size: 1rem;
+  box-shadow: 0 4px 10px var(--shadow);
+  margin: 0 1em 1.5em;
+  border-radius: 8px;
+}
+.info-banner p {
+  margin: 0;
+}
+
+/* ===== ACTIO
