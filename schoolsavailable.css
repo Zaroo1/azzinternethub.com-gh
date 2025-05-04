@@ -139,3 +139,38 @@
 }
 
 /* ===== ACTIO
+
+/* things needed*/
+#zarro1 {
+  text-align: center;
+  margin-top: 150px;
+}
+
+#zarro1 .whatsapp-button {
+  display: inline-block;
+  padding: 22px 45px;
+  background-color: #003366; /* Deep Blue */
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 10px;
+  transition: all 0.4s ease;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  box-shadow: 0 0 12px rgba(0, 0, 255, 0.3);
+  animation: pop 2s infinite ease-in-out;
+}
+
+#zarro1 .whatsapp-button:hover {
+  background-color: #0050b3;
+  color: #fff;
+  transform: scale(1.05);
+  box-shadow: 0 0 20px rgba(0, 128, 255, 0.6);
+}
+
+/* Gentle pop animation */
+@keyframes pop {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.03); }
+  100% { transform: scale(1); }
+}
