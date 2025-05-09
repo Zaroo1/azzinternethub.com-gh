@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | AZZ INTERNET HUB</title>
+    <style>
+        /* AZZ INTERNET HUB Theme */
+        :root {
+            --primary: #0a1f3d;
+            --secondary: #1a4b8c;
+            --accent: #3a7bd5;
+            --text: #ffffff;
+            --bg: #f5f9ff;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--bg);
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        header {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: var(--text);
+            padding: 2rem 0;
+            text-align: center;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+        
+        h1 {
+            margin: 0;
+            font-size: 2.5rem;
+        }
+        
+        .subtitle {
+            font-weight: 300;
+            opacity: 0.9;
+            margin-top: 0.5rem;
+        }
+        
+        .container {
+            max-width: 1000px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+        }
+        
+        .contact-info {
+            background: white;
+            border-radius: 8px;
+            padding: 2rem;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+        }
+        
+        .contact-info h2 {
+            color: var(--primary);
+            margin-top: 0;
+        }
+        
+        .contact-method {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1.5rem;
+        }
+        
+        .contact-icon {
+            background: var(--accent);
+            color: white;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 1rem;
+            font-size: 1.2rem;
+        }
+        
+        .contact-form {
+            background: white;
+            border-radius: 8px;
+            padding: 2rem;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+        }
+        
+        .contact-form h2 {
+            color: var(--primary);
+            margin-top: 0;
+        }
+        
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+        
+        label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+        }
+        
+        input, textarea, select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-family: inherit;
+        }
+        
+        textarea {
+            height: 120px;
+        }
+        
+        .submit-btn {
+            background: var(--accent);
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 50px;
+            cursor: pointer;
+            font-weight: bold;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+        }
+        
+        .submit-btn:hover {
+            background: var(--secondary);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(58, 123, 213, 0.3);
+        }
+        
+        footer {
+            background: var(--primary);
+            color: var(--text);
+            text-align: center;
+            padding: 2rem 0;
+            margin-top: 3rem;
+        }
+        
+        @media (max-width: 768px) {
+            .container {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <h1>AZZ INTERNET HUB</h1>
+        <p class="subtitle">Get in touch with our team</p>
+    </header>
+    
+    <div class="container">
+        <div class="contact-info">
+            <h2>Contact Information</h2>
+            
+            <div class="contact-method">
+                <div class="contact-icon">
+                    <i class="fas fa-map-marker-alt"></i>
+                </div>
+                <div>
+                    <h3>Location</h3>
+                    <p>We fully operate online, so location is not a barrier</p>
+                </div>
+            </div>
+            
+            <div class="contact-method">
+                <div class="contact-icon">
+                    <i class="fas fa-phone-alt"></i>
+                </div>
+                <div>
+                    <h3>Phone</h3>
+                    <p>+233 89 816 0732</p>
+                   <!--<p>+233 98 765 4321</p> -->
+                </div>
+            </div>
+            
+            <div class="contact-method">
+                <div class="contact-icon">
+                    <i class="fas fa-envelope"></i>
+                </div>
+                <div>
+                    <h3>Email</h3>
+                    <p>aazzinternethub@gmail.com</p>
+                    <p>aazzinternethub@gmail.com</p>
+                </div>
+            </div>
+            
+            <div class="contact-method">
+                <div class="contact-icon">
+                    <i class="fas fa-clock"></i>
+                </div>
+                <div>
+                    <h3>Working Hours</h3>
+                    <p>Monday - Sunday: 8:00 AM - 10:00 PM</p>
+                   
+<!-- <p>Saturday: 9:00 AM - 2:00 PM</p> -->
+                </div>
+            </div>
+        </div>
+        
+        <div class="contact-form">
+            <h2>Send Us a Message</h2>
+            <form id="contactForm">
+                <div class="form-group">
+                    <label for="name">Full Name</label>
+                    <input type="text" id="name" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="subject">Subject</label>
+                    <select id="subject" required>
+                        <option value="">Select a subject</option>
+                        <option value="general">General Inquiry</option>
+                        <option value="coding">Coding Tutorials</option>
+                        <option value="universities">University Information</option>
+                        <option value="technical">Technical Support</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="message">Your Message</label>
+                    <textarea id="message" required></textarea>
+                </div>
+                
+                <button type="submit" class="submit-btn">Send Message</button>
+            </form>
+        </div>
+    </div>
+    
+    <footer>
+        <p>&copy; 2023 AZZ INTERNET HUB. All rights reserved.</p>
+        <p>Helping students and professionals navigate the digital world</p>
+    </footer>
+
+    <script>
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Get form values
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const subject = document.getElementById('subject').value;
+            
+            // Show confirmation (in a real site, you would send this to a server)
+            alert(`Thank you, ${name}! Your message about "${subject}" has been received. We'll respond to ${email} shortly.`);
+            
+            // Reset form
+            this.reset();
+        });
+    </script>
+</body>
+</html>

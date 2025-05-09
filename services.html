@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Services - AZZ Internet Hub</title>
+    <style>
+        /* Same styles as index.html up to .section-title */
+        
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        .service-card {
+            background-color: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            transition: all 0.3s;
+        }
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        }
+        .service-card i {
+            font-size: 2.5rem;
+            color: #4a90e2;
+            margin-bottom: 20px;
+        }
+        .service-card h3 {
+            margin-bottom: 15px;
+            color: #001f3f;
+        }
+    </style>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="logo">AZZ INTERNET HUB</a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="universities.html">Universities</a></li>
+                <li><a href="news.html">News</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section style="padding-top: 150px;">
+        <div class="container">
+            <h2 class="section-title">Our Services</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <i class="fas fa-laptop-code"></i>
+                    <h3>Website Design</h3>
+                    <p>Professional custom websites for businesses and personal use</p>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-graduation-cap"></i>
+                    <h3>University Applications</h3>
+                    <p>Assistance with applications to all Ghanaian universities</p>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-passport"></i>
+                    <h3>Passport Assistance</h3>
+                    <p>Guidance through the Ghanaian passport application process</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 AZZ Internet Hub. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <a href="https://wa.me/233598160732" class="whatsapp-float" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</body>
+</html>

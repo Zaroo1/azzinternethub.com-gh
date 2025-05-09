@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learn More | AZZ INTERNET HUB</title>
+    <style>
+        /* AZZ INTERNET HUB Theme */
+        :root {
+            --primary: #0a1f3d;
+            --secondary: #1a4b8c;
+            --accent: #3a7bd5;
+            --text: #ffffff;
+            --bg: #f5f9ff;
+            --highlight: #ffd700;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--bg);
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        header {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: var(--text);
+            padding: 2rem 0;
+            text-align: center;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+        
+        h1 {
+            margin: 0;
+            font-size: 2.5rem;
+        }
+        
+        .subtitle {
+            font-weight: 300;
+            opacity: 0.9;
+            margin-top: 0.5rem;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+        
+        .hero-section {
+            background: linear-gradient(rgba(10, 31, 61, 0.8), rgba(10, 31, 61, 0.8)), 
+                        url('https://images.unsplash.com/photo-1523050854058-8df90110c9f1?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+            background-size: cover;
+            color: white;
+            text-align: center;
+            padding: 4rem 1rem;
+            margin: 2rem 0;
+            border-radius: 8px;
+        }
+        
+        .resource-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+        
+        .resource-card {
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+            transition: all 0.3s ease;
+        }
+        
+        .resource-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(10, 31, 61, 0.15);
+        }
+        
+        .card-header {
+            background: linear-gradient(to right, var(--primary), var(--secondary));
+            color: white;
+            padding: 1rem;
+            text-align: center;
+        }
+        
+        .card-body {
+            padding: 1.5rem;
+        }
+        
+        .btn {
+            display: inline-block;
+            background: var(--accent);
+            color: white;
+            padding: 10px 20px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: bold;
+            margin-top: 1rem;
+            transition: all 0.3s ease;
+        }
+        
+        .btn:hover {
+            background: var(--secondary);
+            box-shadow: 0 4px 8px rgba(58, 123, 213, 0.3);
+        }
+        
+        .faq-section {
+            background: white;
+            border-radius: 8px;
+            padding: 2rem;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+            margin: 3rem 0;
+        }
+        
+        .faq-item {
+            margin-bottom: 1.5rem;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 1rem;
+        }
+        
+        .faq-question {
+            font-weight: bold;
+            color: var(--primary);
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .faq-answer {
+            display: none;
+            padding-top: 0.5rem;
+        }
+        
+        .faq-answer.show {
+            display: block;
+        }
+        
+        footer {
+            background: var(--primary);
+            color: var(--text);
+            text-align: center;
+            padding: 2rem 0;
+            margin-top: 3rem;
+        }
+        
+        @media (max-width: 768px) {
+            .resource-cards {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <h1>AZZ INTERNET HUB</h1>
+        <p class="subtitle">Expand Your Knowledge - Essential Resources for Students</p>
+    </header>
+    
+    <div class="container">
+        <div class="hero-section">
+            <h2>Your Gateway to Academic Success</h2>
+            <p>Discover valuable resources to enhance your learning experience and university preparation</p>
+            <a href="#resources" class="btn">Explore Resources</a>
+        </div>
+        
+        <h2 id="resources" style="text-align: center;">Featured Learning Resources</h2>
+        
+        <div class="resource-cards">
+            <!-- Resource Card 1 -->
+            <div class="resource-card">
+                <div class="card-header">
+                    <h3><i class="fas fa-graduation-cap"></i> University Guides</h3>
+                </div>
+                <div class="card-body">
+                    <p>Comprehensive guides to Ghanaian universities including:</p>
+                    <ul>
+                        <li>Admission requirements</li>
+                        <li>Program cut-off points</li>
+                        <li>Campus life insights</li>
+                        <li>Scholarship opportunities</li>
+                    </ul>
+                    <a href="alluniversities.html" class="btn">View University Guides</a>
+                </div>
+            </div>
+            
+            <!-- Resource Card 2 -->
+            <div class="resource-card">
+                <div class="card-header">
+                    <h3><i class="fas fa-laptop-code"></i> Digital Skills Training</h3>
+                </div>
+                <div class="card-body">
+                    <p>Affordable courses to boost your tech skills:</p>
+                    <ul>
+                        <li>Web development from 130 GHS</li>
+                        <li>Graphic design principles</li>
+                        <li>Digital marketing basics</li>
+                        <li>Data science introduction</li>
+                    </ul>
+                    <a href="digitalskills.html" class="btn">Explore Courses</a>
+                </div>
+            </div>
+            
+            <!-- Resource Card 3 -->
+            <div class="resource-card">
+                <div class="card-header">
+                    <h3><i class="fas fa-book-open"></i> Study Resources</h3>
+                </div>
+                <div class="card-body">
+                    <p>Essential tools for academic success:</p>
+                    <ul>
+                        <li>WASSCE/SSCE past questions</li>
+                        <li>Subject-specific study guides</li>
+                        <li>Research methodology tips</li>
+                        <li>Time management strategies</li>
+                    </ul>
+                    <a href="education.html" class="btn">Access Resources</a>
+                </div>
+            </div>
+
+            
+            <!-- Resource Card 4 -->
+            <div class="resource-card">
+                <div class="card-header">
+                    <h3><i class="fas fa-briefcase"></i> Career Preparation</h3>
+                </div>
+                <div class="card-body">
+                    <p>Resources to launch your career:</p>
+                    <ul>
+                        <li>CV and cover letter templates</li>
+                        <li>Interview preparation guides</li>
+                        <li>Internship opportunities</li>
+                        <li>Career path exploration</li>
+                    </ul>
+                    <a href="career.html" class="btn">Start Preparing</a>
+                </div>
+            </div>
+            
+            <!-- Resource Card 5 -->
+            <div class="resource-card">
+                <div class="card-header">
+                    <h3><i class="fas fa-heartbeat"></i> Health & Wellness</h3>
+                </div>
+                <div class="card-body">
+                    <p>Resources for student wellbeing:</p>
+                    <ul>
+                        <li>Mental health guides</li>
+                        <li>Study-life balance tips</li>
+                        <li>Campus health services</li>
+                        <li>Nutrition for students</li>
+                    </ul>
+                    <a href="healthsciences.html" class="btn">Learn More</a>
+                </div>
+            </div>
+            
+            <!-- Resource Card 6 -->
+            <div class="resource-card">
+                <div class="card-header">
+                    <h3><i class="fas fa-hand-holding-usd"></i> Financial Aid</h3>
+                </div>
+                <div class="card-body">
+                    <p>Funding your education:</p>
+                    <ul>
+                        <li>Scholarship databases</li>
+                        <li>Student loan information</li>
+                        <li>Part-time work opportunities</li>
+                        <li>Budgeting for students</li>
+                    </ul>
+                    <a href="scholarship.html" class="btn">Find Funding</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="faq-section">
+            <h2 style="text-align: center; color: var(--primary);">Frequently Asked Questions</h2>
+            
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleAnswer(1)">
+                    <span>How do I check university admission requirements?</span>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer" id="answer1">
+                    <p>Our <a href="alluniversities.html">University Guides</a> section provides detailed admission requirements for all major Ghanaian universities. You can find specific program cut-off points, subject requirements, and application procedures for each institution.</p>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleAnswer(2)">
+                    <span>What digital skills are most valuable for students?</span>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer" id="answer2">
+                    <p>We recommend starting with basic computer literacy, then progressing to:</p>
+                    <ol>
+                        <li>Microsoft Office Suite (Word, Excel, PowerPoint)</li>
+                        <li>Basic web development (HTML/CSS)</li>
+                        <li>Graphic design (Canva, Photoshop basics)</li>
+                        <li>Digital marketing fundamentals</li>
+                        <li>Data analysis skills</li>
+                    </ol>
+                    <p>Our <a href="digitalskills.html">Digital Skills</a> courses start from just 130 GHS.</p>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleAnswer(3)">
+                    <span>How can I improve my WASSCE/SSCE results?</span>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer" id="answer3">
+                    <p>Effective strategies include:</p>
+                    <ul>
+                        <li>Solving past questions (available in our <a href="education.html">Education Resources</a>)</li>
+                        <li>Creating a study timetable and sticking to it</li>
+                        <li>Joining study groups</li>
+                        <li>Seeking help from teachers or tutors for difficult topics</li>
+                        <li>Practicing time management during exams</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleAnswer(4)">
+                    <span>Where can I find scholarships for university?</span>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer" id="answer4">
+                    <p>We maintain an updated database of scholarships in our <a href="scholarship.html">Financial Aid</a> section. Key sources include:</p>
+                    <ul>
+                        <li>Government scholarships (GETFund)</li>
+                        <li>University-specific scholarships</li>
+                        <li>Corporate scholarships (MTN, Vodafone, etc.)</li>
+                        <li>International opportunities</li>
+                    </ul>
+                    <p>Check back regularly as new opportunities are added frequently.</p>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleAnswer(5)">
+                    <span>How do I prepare for university interviews?</span>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer" id="answer5">
+                    <p>University interview preparation tips:</p>
+                    <ol>
+                        <li>Research the program and university thoroughly</li>
+                        <li>Prepare to discuss why you chose the program</li>
+                        <li>Review your academic background</li>
+                        <li>Practice common interview questions</li>
+                        <li>Dress appropriately and arrive early</li>
+                        <li>Prepare questions to ask the interviewers</li>
+                    </ol>
+                    <p>Our <a href="career.html">Career Preparation</a> resources include mock interview questions.</p>
+                </div>
+            </div>
+        </div>
+        
+        <div style="text-align: center; margin: 3rem 0;">
+            <h3>Need More Help?</h3>
+            <p>Contact our support team for personalized assistance with your educational journey</p>
+            <a href="contact.html" class="btn">Contact Us</a>
+        </div>
+    </div>
+    
+    <footer>
+        <p>&copy; 2023 AZZ INTERNET HUB. All rights reserved.</p>
+        <p>Empowering students through comprehensive educational resources</p>
+    </footer>
+
+    <script>
+        // FAQ toggle functionality
+        function toggleAnswer(id) {
+            const answer = document.getElementById(`answer${id}`);
+            answer.classList.toggle('show');
+            
+            const icon = document.querySelector(`#answer${id}`).previousElementSibling.querySelector('i');
+            icon.classList.toggle('fa-chevron-down');
+            icon.classList.toggle('fa-chevron-up');
+        }
+        
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>

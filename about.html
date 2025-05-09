@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - AZZ Internet Hub</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        /* === GLOBAL STYLES === */
+        :root {
+            --deep-blue: #001f3f;
+            --accent-blue: #4a90e2;
+            --white: #ffffff;
+            --light-gray: #f8f9fa;
+        }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        body {
+            background-color: var(--light-gray);
+            color: #333;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* === NAVIGATION === */
+        .navbar {
+            background-color: var(--deep-blue);
+            padding: 15px 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+        }
+        .logo {
+            color: var(--white);
+            font-size: 1.5rem;
+            font-weight: 700;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+        .logo:hover {
+            color: var(--accent-blue);
+            transform: scale(1.05);
+        }
+        .nav-links {
+            display: flex;
+            list-style: none;
+        }
+        .nav-links li {
+            margin-left: 30px;
+        }
+        .nav-links a {
+            color: var(--white);
+            text-decoration: none;
+            font-weight: 500;
+            position: relative;
+            transition: all 0.3s ease;
+        }
+        .nav-links a:hover {
+            color: var(--accent-blue);
+        }
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            background: var(--accent-blue);
+            bottom: -5px;
+            left: 0;
+            transition: width 0.3s ease;
+        }
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        /* === HERO SECTION === */
+        .about-hero {
+            background: linear-gradient(rgba(0, 31, 63, 0.9), rgba(0, 31, 63, 0.9)), url('about-bg.jpg');
+            background-size: cover;
+            background-position: center;
+            color: var(--white);
+            text-align: center;
+            padding: 150px 0 100px;
+            margin-top: 60px;
+            animation: fadeIn 1s ease;
+        }
+        .about-hero h1 {
+            font-size: 2.8rem;
+            margin-bottom: 20px;
+        }
+        .about-hero p {
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        /* === MAIN CONTENT === */
+        .about-content {
+            padding: 80px 0;
+        }
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+            color: var(--deep-blue);
+            position: relative;
+        }
+        .section-title::after {
+            content: '';
+            position: absolute;
+            width: 80px;
+            height: 3px;
+            background: var(--accent-blue);
+            bottom: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            align-items: center;
+        }
+        .about-text h3 {
+            color: var(--deep-blue);
+            margin-bottom: 20px;
+            font-size: 1.8rem;
+        }
+        .about-text p {
+            margin-bottom: 15px;
+        }
+        .highlight {
+            color: var(--accent-blue);
+            font-weight: 600;
+        }
+        .about-image img {
+            width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transition: transform 0.5s ease;
+        }
+        .about-image img:hover {
+            transform: scale(1.02);
+        }
+
+        /* === TEAM SECTION === */
+        .team-section {
+            background-color: var(--white);
+            padding: 80px 0;
+        }
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+        .team-card {
+            background: var(--white);
+            border-radius: 10px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            overflow: hidden;
+            transition: all 0.3s ease;
+            text-align: center;
+        }
+        .team-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+        }
+        .team-img {
+            height: 250px;
+            overflow: hidden;
+        }
+        .team-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+        .team-card:hover .team-img img {
+            transform: scale(1.1);
+        }
+        .team-info {
+            padding: 20px;
+        }
+        .team-info h3 {
+            color: var(--deep-blue);
+            margin-bottom: 5px;
+        }
+        .team-info p {
+            color: var(--accent-blue);
+            font-weight: 500;
+        }
+        .social-links {
+            margin-top: 15px;
+        }
+        .social-links a {
+            color: var(--deep-blue);
+            margin: 0 5px;
+            font-size: 1.2rem;
+            transition: all 0.3s ease;
+        }
+        .social-links a:hover {
+            color: var(--accent-blue);
+            transform: translateY(-3px);
+        }
+
+        /* === VALUES SECTION === */
+        .values-section {
+            padding: 80px 0;
+            background-color: var(--light-gray);
+        }
+        .values-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+        .value-card {
+            background: var(--white);
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            transition: all 0.3s ease;
+            text-align: center;
+        }
+        .value-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+        }
+        .value-icon {
+            font-size: 2.5rem;
+            color: var(--accent-blue);
+            margin-bottom: 20px;
+        }
+        .value-card h3 {
+            color: var(--deep-blue);
+            margin-bottom: 15px;
+        }
+
+        /* === CTA SECTION === */
+        .cta-section {
+            background-color: var(--deep-blue);
+            color: var(--white);
+            text-align: center;
+            padding: 80px 0;
+        }
+        .cta-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 30px;
+            flex-wrap: wrap;
+        }
+        .btn {
+            display: inline-block;
+            padding: 12px 30px;
+            border-radius: 5px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+        .btn-primary {
+            background-color: var(--accent-blue);
+            color: var(--white);
+        }
+        .btn-primary:hover {
+            background-color: #3a7bc8;
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+        .btn-outline {
+            background-color: transparent;
+            border: 2px solid var(--white);
+            color: var(--white);
+        }
+        .btn-outline:hover {
+            background-color: var(--white);
+            color: var(--deep-blue);
+            transform: translateY(-3px);
+        }
+
+        /* === FOOTER === */
+        footer {
+            background-color: var(--deep-blue);
+            color: var(--white);
+            text-align: center;
+            padding: 30px 0;
+        }
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin: 20px 0;
+        }
+        .footer-links a {
+            color: var(--white);
+            font-size: 1.2rem;
+            transition: all 0.3s ease;
+        }
+        .footer-links a:hover {
+            color: var(--accent-blue);
+            transform: translateY(-3px);
+        }
+
+        /* === WHATSAPP FLOAT === */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background-color: #25D366;
+            color: var(--white);
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            text-decoration: none;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+            transition: all 0.3s ease;
+            z-index: 999;
+            animation: float 3s ease-in-out infinite;
+        }
+        .whatsapp-float:hover {
+            transform: scale(1.1);
+            background-color: #128C7E;
+        }
+
+        /* === ANIMATIONS === */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0px); }
+        }
+
+        /* === RESPONSIVE DESIGN === */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+            .about-hero h1 {
+                font-size: 2.2rem;
+            }
+            .about-grid {
+                grid-template-columns: 1fr;
+            }
+            .about-image {
+                order: -1;
+                margin-bottom: 30px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="logo">AZZ INTERNET HUB</a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="universities.html">Universities</a></li>
+                <li><a href="news.html">News</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="about-hero">
+        <div class="container">
+            <h1>Our Story</h1>
+            <p>Empowering Ghana through digital solutions and educational support since 2023</p>
+        </div>
+    </section>
+
+    <!-- About Content -->
+    <section class="about-content">
+        <div class="container">
+            <h2 class="section-title">About AZZ Internet Hub</h2>
+            <div class="about-grid">
+                <div class="about-text">
+                    <h3>Who We Are</h3>
+                    <p>Founded in 2023 by <span class="highlight">Abdul-Aziz Zaroo</span>, AZZ Internet Hub began as a small online internet cafe  with a vision to bridge the digital divide in Ghana. It is the first fully online internet cafe in Ghana and if not in the world</p>
+                    <p>Today, we've grown into a comprehensive digital services provider, helping thousands of students and professionals navigate the digital world.</p>
+                    <h3>Our Mission</h3>
+                    <p>To provide <span class="highlight">accessible, affordable, and professional</span> digital solutions that empower individuals and businesses to thrive in the digital age.</p>
+                </div>
+                <div class="about-image">
+                    <img src="logo.jpg" alt="AZZ Internet Hub Team">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section class="team-section">
+        <div class="container">
+            <h2 class="section-title">Meet Our Team</h2>
+            <div class="team-grid">
+                <div class="team-card">
+                    <div class="team-img">
+                        <img src="owner.jpg" alt="Abdul-Aziz Zaroo">
+                    </div>
+                    <div class="team-info">
+                        <h3>Abdul-Aziz Zaroo</h3>
+                        <p>Founder & CEO</p>
+                        <div class="social-links">
+                            <a href="https://www.facebook.com/share/16BCTo9ZJJ/?mibextid=LQQJ4d"><i class="fab fa-facebook"></i></a>
+                            <a href="https://x.com/abdulazizzarooo?s=21"><i class="fab fa-twitter"></i></a>
+                            <a href="https://www.linkedin.com/in/%C3%A4bdul-aziz-4495b32a0?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"><i class="fab fa-linkedin"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Add more team members as needed -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Values Section -->
+    <section class="values-section">
+        <div class="container">
+            <h2 class="section-title">Our Core Values</h2>
+            <div class="values-grid">
+                <div class="value-card">
+                    <div class="value-icon">
+                        <i class="fas fa-hand-holding-heart"></i>
+                    </div>
+                    <h3>Integrity</h3>
+                    <p>We believe in honest, transparent service with no hidden fees or false promises.</p>
+                </div>
+                <div class="value-card">
+                    <div class="value-icon">
+                        <i class="fas fa-lightbulb"></i>
+                    </div>
+                    <h3>Innovation</h3>
+                    <p>Constantly evolving our services to meet the changing digital landscape.</p>
+                </div>
+                <div class="value-card">
+                    <div class="value-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3>Community</h3>
+                    <p>Committed to empowering our local community through digital education.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <h2>Ready to Work With Us?</h2>
+            <p>Whether you need university application help or professional digital services, we're here for you.</p>
+            <div class="cta-buttons">
+                <a href="contact.html" class="btn btn-primary">Get in Touch</a>
+                <a href="services.html" class="btn btn-outline">Our Services</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 AZZ Internet Hub. All rights reserved.</p>
+            <div class="footer-links">
+                <a href="https://www.facebook.com/share/16C3WWn2Ev/?mibextid=LQQJ4d"><i class="fab fa-facebook"></i></a>
+                <a href="https://x.com/abdulazizzarooo?s=21"><i class="fab fa-twitter"></i></a>
+                <a href="https://www.instagram.com/abdulazizzaroo?igsh=d203OGhrcjhuY2tl&utm_source=qr"><i class="fab fa-instagram"></i></a>
+                <a href="https://youtube.com/@azzinternethub?si=h-ViqdegRProkyXV"><i class="fab fa-youtube"></i></a>
+            </div>
+            <p>Contact: +233 59 816 0732</p>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Float -->
+    <a href="https://wa.me/233598160732" class="whatsapp-float" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Simple JavaScript for mobile menu -->
+    <script>
+        // Mobile menu toggle functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const hamburger = document.createElement('div');
+            hamburger.className = 'hamburger';
+            hamburger.innerHTML = '<i class="fas fa-bars"></i>';
+            hamburger.style.display = 'none';
+            hamburger.style.cursor = 'pointer';
+            hamburger.style.fontSize = '1.5rem';
+            hamburger.style.color = 'white';
+            
+            const navbar = document.querySelector('.navbar .container');
+            navbar.appendChild(hamburger);
+            
+            const navLinks = document.querySelector('.nav-links');
+            
+            hamburger.addEventListener('click', function() {
+                navLinks.style.display = navLinks.style.display === 'flex' ? 'none' : 'flex';
+            });
+            
+            function checkScreenSize() {
+                if (window.innerWidth <= 768) {
+                    hamburger.style.display = 'block';
+                    navLinks.style.display = 'none';
+                    navLinks.style.flexDirection = 'column';
+                    navLinks.style.position = 'absolute';
+                    navLinks.style.top = '60px';
+                    navLinks.style.left = '0';
+                    navLinks.style.width = '100%';
+                    navLinks.style.backgroundColor = 'var(--deep-blue)';
+                    navLinks.style.padding = '20px 0';
+                } else {
+                    hamburger.style.display = 'none';
+                    navLinks.style.display = 'flex';
+                    navLinks.style.position = 'static';
+                    navLinks.style.backgroundColor = 'transparent';
+                    navLinks.style.padding = '0';
+                }
+            }
+            
+            window.addEventListener('resize', checkScreenSize);
+            checkScreenSize();
+        });
+    </script>
+</body>
+</html>

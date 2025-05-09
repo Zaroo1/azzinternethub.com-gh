@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Education Resources | AZZ INTERNET HUB</title>
+    <style>
+        /* AZZ INTERNET HUB Theme */
+        :root {
+            --primary: #0a1f3d;
+            --secondary: #1a4b8c;
+            --accent: #3a7bd5;
+            --text: #ffffff;
+            --bg: #f5f9ff;
+            --highlight: #ffd700;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--bg);
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        header {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: var(--text);
+            padding: 2rem 0;
+            text-align: center;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+        
+        h1 {
+            margin: 0;
+            font-size: 2.5rem;
+        }
+        
+        .subtitle {
+            font-weight: 300;
+            opacity: 0.9;
+            margin-top: 0.5rem;
+        }
+        
+        .hero-banner {
+            background: linear-gradient(rgba(10, 31, 61, 0.8), rgba(10, 31, 61, 0.8)), 
+                        url('https://images.unsplash.com/photo-1523050854058-8df90110c9f1?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+            background-size: cover;
+            color: white;
+            text-align: center;
+            padding: 4rem 1rem;
+            margin: 2rem 0;
+            border-radius: 8px;
+        }
+        
+        .hero-banner h2 {
+            font-size: 2.2rem;
+            margin-top: 0;
+        }
+        
+        .hero-banner .highlight {
+            color: var(--highlight);
+            font-weight: bold;
+        }
+        
+        .container {
+            max-width: 1000px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+        
+        .resource-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+        
+        .resource-card {
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+            transition: all 0.3s ease;
+        }
+        
+        .resource-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(10, 31, 61, 0.15);
+        }
+        
+        .card-image {
+            height: 180px;
+            background-size: cover;
+            background-position: center;
+        }
+        
+        .card-body {
+            padding: 1.5rem;
+        }
+        
+        .card-body h3 {
+            margin-top: 0;
+            color: var(--primary);
+        }
+        
+        .price-tag {
+            background: var(--accent);
+            color: white;
+            padding: 5px 10px;
+            border-radius: 4px;
+            font-weight: bold;
+            display: inline-block;
+            margin-top: 1rem;
+        }
+        
+        .btn {
+            display: inline-block;
+            background: var(--accent);
+            color: white;
+            padding: 10px 20px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: bold;
+            margin-top: 1rem;
+            transition: all 0.3s ease;
+        }
+        
+        .btn:hover {
+            background: var(--secondary);
+            box-shadow: 0 4px 8px rgba(58, 123, 213, 0.3);
+        }
+        
+        .university-section {
+            background: white;
+            border-radius: 8px;
+            padding: 2rem;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+            margin: 3rem 0;
+        }
+        
+        .university-section h2 {
+            color: var(--primary);
+            margin-top: 0;
+            border-bottom: 2px solid var(--accent);
+            padding-bottom: 0.5rem;
+            display: inline-block;
+        }
+        
+        footer {
+            background: var(--primary);
+            color: var(--text);
+            text-align: center;
+            padding: 2rem 0;
+            margin-top: 3rem;
+        }
+        
+        @media (max-width: 768px) {
+            .resource-cards {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <h1>AZZ INTERNET HUB</h1>
+        <p class="subtitle">Your Gateway to Educational Excellence</p>
+    </header>
+    
+    <div class="container">
+        <div class="hero-banner">
+            <h2>Transform Your <span class="highlight">Education</span> Journey</h2>
+            <p>Access premium learning resources, university guides, and digital tools designed for Ghanaian students</p>
+            <a href="#resources" class="btn">Explore Resources</a>
+        </div>
+        
+        <div id="resources" class="resource-cards">
+            
+
+
+
+
+<!-- Resource Card 1 -->
+<!--
+            <div class="resource-card">
+                <div class="card-image" style="background-image: url('https://images.unsplash.com/photo-1434030216411-0b793f4b4173?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');"></div>
+                <div class="card-body">
+                    <h3>University Admission Prep</h3>
+                    <p>Complete guide to Ghanaian university admissions with past questions and interview tips</p>
+                    <div class="price-tag">150 GHS</div>
+                    <a href="#" class="btn">Get Started</a>
+                </div>
+            </div>
+            
+            
+
+
+
+
+<!-- Resource Card 2 -->
+<!--
+            <div class="resource-card">
+                <div class="card-image" style="background-image: url('https://images.unsplash.com/photo-1503676260728-1c00da094a0b?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');"></div>
+                <div class="card-body">
+                    <h3>Online Tutoring</h3>
+                    <p>Personalized 1-on-1 tutoring in core subjects (WASSCE, SAT, etc.)</p>
+                    <div class="price-tag">From 200 GHS/month</div>
+                    <a href="#" class="btn">Find a Tutor</a>
+                </div>
+            </div>
+            
+            
+
+
+
+
+
+<!-- Resource Card 3 -->
+<!--
+            <div class="resource-card">
+                <div class="card-image" style="background-image: url('https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');"></div>
+                <div class="card-body">
+                    <h3>E-Learning Portal</h3>
+                    <p>Access 100+ courses in STEM, Business, and Creative Arts</p>
+                    <div class="price-tag">250 GHS/year</div>
+                    <a href="#" class="btn">Browse Courses</a>
+                </div>
+            </div>
+            
+            
+
+
+
+
+
+<!-- Resource Card 4 -->
+            <div class="resource-card">
+                <div class="card-image" style="background-image: url('https://images.unsplash.com/photo-1523240795612-9a054b0db644?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');"></div>
+                <div class="card-body">
+                    <h3>Scholarship Finder</h3>
+                    <p>Updated database of local and international scholarships for Ghanaian students</p>
+                    <div class="price-tag">Free</div>
+                    <a href="scholarship.html" class="btn">Search Scholarships</a>
+                </div>
+            </div>
+            
+
+
+
+ <!-- Resource Card 5 -->
+            <div class="resource-card">
+                <div class="card-image" style="background-image: url('https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');"></div>
+                <div class="card-body">
+                    <h3>Career Guidance</h3>
+                    <p>Personalized career assessment and university program recommendations</p>
+                    <div class="price-tag">Free</div>
+                    <a href="career.html" class="btn">Take a look</a>
+                </div>
+            </div>
+            
+
+
+            
+
+<!-- Resource Card 6 -->
+
+
+<!--<div class="resource-card">
+<!--<div class="card-image" style="background-image: url('https://images.unsplash.com/photo-1521791055366-0d553872125f?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');"></div>
+              <!--  <div class="card-body">
+                  <!-- <h3>Student Digital Toolkit</h3>
+                   <!-- <p>Essential software and apps bundle for academic success</p>
+                  <!--  <div class="price-tag">120 GHS</div>
+                  <!--  <a href="#" class="btn">Get Toolkit</a>
+           <!--     </div>
+         <!--   </div>
+   <!--     </div> -->
+        
+        <div class="university-section">
+            <h2><i class="fas fa-university"></i> Ghana University Resources</h2>
+            <p>Explore our comprehensive guides to universities in Ghana:</p>
+            <ul>
+                <li><strong>Public Universities:</strong> Admission requirements, cut-off points, and campus life</li>
+                <li><strong>Technical Universities:</strong> Program specializations and career pathways</li>
+                <li><strong>Private Universities:</strong> Accreditation status and unique offerings</li>
+                <li><strong>Colleges of Education:</strong> Teacher training programs and requirements</li>
+            </ul>
+            <a href="alluniversities.html" class="btn">View All Universities</a>
+        </div>
+        
+        <div style="text-align: center; margin: 3rem 0;">
+            <h3>Why Choose AZZ INTERNET HUB for Education?</h3>
+            <p>• <strong>Affordable</strong> resources for Ghanaian students<br>
+               • <strong>Verified</strong> and up-to-date information<br>
+               • <strong>Digital-first</strong> learning approach<br>
+               • <strong>Success-focused</strong> tools and guidance</p>
+        </div>
+    </div>
+    
+    <footer>
+        <p>&copy; 2023 AZZ INTERNET HUB. All rights reserved.</p>
+        <p>Empowering Ghana's students through digital education</p>
+    </footer>
+
+    <script>
+        // Simple interactive elements
+        document.querySelectorAll('.btn').forEach(btn => {
+            btn.addEventListener('click', function(e) {
+                if (!this.getAttribute('href') || this.getAttribute('href') === '#') {
+                    e.preventDefault();
+                    const resource = this.closest('.resource-card').querySelector('h3').textContent;
+                    alert(`Thank you for your interest in our ${resource} service! Our team will contact you shortly.`);
+                }
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Skills Training | AZZ INTERNET HUB</title>
+    <style>
+        /* AZZ INTERNET HUB Theme */
+        :root {
+            --primary: #0a1f3d;
+            --secondary: #1a4b8c;
+            --accent: #3a7bd5;
+            --text: #ffffff;
+            --bg: #f5f9ff;
+            --highlight: #ffd700;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--bg);
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        header {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: var(--text);
+            padding: 2rem 0;
+            text-align: center;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+        
+        h1 {
+            margin: 0;
+            font-size: 2.5rem;
+        }
+        
+        .subtitle {
+            font-weight: 300;
+            opacity: 0.9;
+            margin-top: 0.5rem;
+        }
+        
+        .pricing-banner {
+            background: linear-gradient(to right, var(--primary), #0d2b57);
+            color: white;
+            text-align: center;
+            padding: 1.5rem;
+            margin: 2rem 0;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(10, 31, 61, 0.2);
+        }
+        
+        .pricing-banner .highlight {
+            font-size: 2.2rem;
+            color: var(--highlight);
+            font-weight: bold;
+            display: block;
+            margin: 0.5rem 0;
+        }
+        
+        .container {
+            max-width: 1000px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+        
+        .tier-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+        
+        .tier-card {
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+            transition: all 0.3s ease;
+            position: relative;
+        }
+        
+        .tier-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(10, 31, 61, 0.15);
+        }
+        
+        .tier-header {
+            background: linear-gradient(to right, var(--primary), var(--secondary));
+            color: white;
+            padding: 1.5rem;
+            text-align: center;
+        }
+        
+        .tier-header h2 {
+            margin: 0;
+        }
+        
+        .tier-price {
+            font-size: 2.5rem;
+            font-weight: bold;
+            margin: 1rem 0;
+            color: var(--highlight);
+        }
+        
+        .tier-body {
+            padding: 1.5rem;
+        }
+        
+        .tier-features {
+            list-style-type: none;
+            padding: 0;
+        }
+        
+        .tier-features li {
+            padding: 0.5rem 0;
+            border-bottom: 1px dashed #eee;
+            display: flex;
+            align-items: center;
+        }
+        
+        .tier-features li:before {
+            content: "✓";
+            color: var(--accent);
+            font-weight: bold;
+            margin-right: 0.5rem;
+        }
+        
+        .enroll-btn {
+            display: block;
+            background: var(--accent);
+            color: white;
+            padding: 12px 24px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: bold;
+            margin: 1.5rem auto 0;
+            text-align: center;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+            font-size: 1rem;
+            width: 80%;
+        }
+        
+        .enroll-btn:hover {
+            background: var(--secondary);
+            box-shadow: 0 4px 8px rgba(58, 123, 213, 0.3);
+            transform: translateY(-2px);
+        }
+        
+        .course-list {
+            background: white;
+            border-radius: 8px;
+            padding: 2rem;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+            margin: 3rem 0;
+        }
+        
+        .course-list h2 {
+            color: var(--primary);
+            margin-top: 0;
+            border-bottom: 2px solid var(--accent);
+            padding-bottom: 0.5rem;
+            display: inline-block;
+        }
+        
+        .course-category {
+            margin: 2rem 0;
+        }
+        
+        .course-item {
+            display: flex;
+            justify-content: space-between;
+            padding: 0.8rem 0;
+            border-bottom: 1px solid #eee;
+        }
+        
+        footer {
+            background: var(--primary);
+            color: var(--text);
+            text-align: center;
+            padding: 2rem 0;
+            margin-top: 3rem;
+        }
+        
+        @media (max-width: 768px) {
+            .tier-container {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <h1>AZZ INTERNET HUB</h1>
+        <p class="subtitle">Master In-Demand Digital Skills in Ghana</p>
+    </header>
+
+
+<!-- 
+    <div class="container">
+        <div class="pricing-banner">
+            <h2>Digital Skills Training Programs</h2>
+            <span class="highlight">Starting from 150 GHS</span>
+            <p>Affordable, practical training for the modern workforce</p>
+        </div>
+        
+        <h2 style="text-align: center;">Our Training Tiers</h2>
+        <div class="tier-container">
+
+-->
+
+
+
+            <!-- Basic Tier 
+            <div class="tier-card">
+                <div class="tier-header">
+                    <h2>Basic</h2>
+                    <div class="tier-price">150 GHS</div>
+                    <p>Per month</p>
+                </div>
+                <div class="tier-body">
+                    <ul class="tier-features">
+                        <li>1 core skill of your choice</li>
+                        <li>8 hours of training</li>
+                        <li>Weekly assignments</li>
+                        <li>Email support</li>
+                        <li>Basic certificate</li>
+                    </ul>
+                    <button class="enroll-btn">Enroll in Basic</button>
+                </div>
+            </div>
+            
+            
+
+
+<!-- Standard Tier 
+            <div class="tier-card">
+                <div class="tier-header" style="background: linear-gradient(to right, #1a4b8c, #0a1f3d);">
+                    <h2>Standard</h2>
+                    <div class="tier-price">300 GHS</div>
+                    <p>Per month</p>
+                </div>
+                <div class="tier-body">
+                    <ul class="tier-features">
+                        <li>2 digital skills</li>
+                        <li>16 hours of training</li>
+                        <li>Practical projects</li>
+                        <li>Priority email support</li>
+                        <li>Verified certificate</li>
+                        <li>Career webinar access</li>
+                    </ul>
+                    <button class="enroll-btn">Enroll in Standard</button>
+                </div>
+            </div>
+            
+            
+
+
+
+<!--Premium Tier-->
+<!--
+<div class="tier-card">
+<div class="tier-header" style="background: linear-gradient(to right, #3a7bd5, #1a4b8c);">
+                    <h2>Premium</h2>
+                    <div class="tier-price">500 GHS</div>
+                    <p>Per month</p>
+                </div>
+                <div class="tier-body">
+                    <ul class="tier-features">
+                        <li>Unlimited skills access</li>
+                        <li>32 hours of training</li>
+                        <li>Real-world projects</li>
+                        <li>1-on-1 mentorship</li>
+                        <li>Professional certificate</li>
+                        <li>Job placement assistance</li>
+                        <li>Portfolio review</li>
+                    </ul>
+                    <button class="enroll-btn">Enroll in Premium</button>
+                </div>
+            </div>
+        </div>
+-->
+        <div class="course-list">
+            <h2>Available Digital Skills Courses</h2>
+            
+            <div class="course-category">
+                <h3>Essential Digital Literacy</h3>
+                <div class="course-item">
+                    <span>Computer Fundamentals</span>
+                    <span>150 GHS</span>
+                </div>
+                <div class="course-item">
+                    <span>Internet & Email Mastery</span>
+                    <span>150 GHS</span>
+                </div>
+                <div class="course-item">
+                    <span>Microsoft Office Suite</span>
+                    <span>200 GHS</span>
+                </div>
+            </div>
+            
+            <div class="course-category">
+                <h3>Creative Design</h3>
+                <div class="course-item">
+                    <span>Graphic Design (Canva)</span>
+                    <span>250 GHS</span>
+                </div>
+                <div class="course-item">
+                    <span>Professional Photoshop</span>
+                    <span>300 GHS</span>
+                </div>
+                <div class="course-item">
+                    <span>Video Editing Basics</span>
+                    <span>300 GHS</span>
+                </div>
+            </div>
+            
+            <div class="course-category">
+                <h3>Web Development</h3>
+                <div class="course-item">
+                    <span>HTML/CSS Fundamentals</span>
+                    <span>250 GHS</span>
+                </div>
+                <div class="course-item">
+                    <span>JavaScript Basics</span>
+                    <span>300 GHS</span>
+                </div>
+                <div class="course-item">
+                    <span>WordPress Website Building</span>
+                    <span>350 GHS</span>
+                </div>
+            </div>
+            
+            <div class="course-category">
+                <h3>Digital Marketing</h3>
+                <div class="course-item">
+                    <span>Social Media Marketing</span>
+                    <span>250 GHS</span>
+                </div>
+                <div class="course-item">
+                    <span>Content Creation</span>
+                    <span>200 GHS</span>
+                </div>
+                <div class="course-item">
+                    <span>Google Ads & Analytics</span>
+                    <span>350 GHS</span>
+                </div>
+            </div>
+        </div>
+        
+
+
+
+
+        <div style="text-align: center; margin: 3rem 0;">
+            <h3>Why Learn With AZZ INTERNET HUB?</h3>
+            <p>• <strong>Practical</strong>, hands-on training<br>
+               • <strong>Affordable</strong> pricing for Ghanaian students<br>
+               • <strong>Flexible</strong> learning schedules<br>
+               • <strong>Industry-recognized</strong> certificates</p>
+        </div>
+    </div>
+    
+    <footer>
+        <p>&copy; 2023 AZZ INTERNET HUB. All rights reserved.</p>
+        <p>Empowering Ghana's digital workforce</p>
+    </footer>
+
+    <script>
+        // Interactive enrollment buttons
+        document.querySelectorAll('.enroll-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                const tier = btn.closest('.tier-card').querySelector('h2').textContent;
+                alert(`Thank you for choosing our ${tier} digital skills program! Our team will contact you with enrollment details.`);
+            });
+        });
+    </script>
+</body>
+</html>

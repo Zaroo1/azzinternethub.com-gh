@@ -1,0 +1,654 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Career Preparation - Ghana Focus</title>
+    <style>
+        :root {
+            --deep-blue: #003366;
+            --light-blue: #0066cc;
+            --white: #ffffff;
+            --off-white: #f5f5f5;
+            --accent: #ff9900;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: var(--off-white);
+            color: var(--deep-blue);
+            line-height: 1.6;
+        }
+        
+        header {
+            background: linear-gradient(135deg, var(--deep-blue), var(--light-blue));
+            color: var(--white);
+            padding: 2rem 0;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        header::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 10px;
+            background: var(--accent);
+        }
+        
+        .header-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            position: relative;
+            z-index: 1;
+        }
+        
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            animation: fadeIn 1s ease-in-out;
+        }
+        
+        .tagline {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            margin-bottom: 1.5rem;
+        }
+        
+        .ghana-flag {
+            display: inline-block;
+            width: 30px;
+            height: 20px;
+            background: linear-gradient(to bottom, 
+                red 33%, 
+                yellow 33%, 
+                yellow 66%, 
+                green 66%);
+            margin: 0 10px;
+            vertical-align: middle;
+            border-radius: 2px;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 20px;
+        }
+        
+        .intro {
+            text-align: center;
+            margin-bottom: 3rem;
+            padding: 2rem;
+            background-color: var(--white);
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+        
+        .resources-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+        
+        .resource-card {
+            background-color: var(--white);
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            position: relative;
+        }
+        
+        .resource-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+        }
+        
+        .card-header {
+            background-color: var(--deep-blue);
+            color: var(--white);
+            padding: 1.5rem;
+            position: relative;
+        }
+        
+        .card-header h3 {
+            margin: 0;
+            font-size: 1.5rem;
+        }
+        
+        .card-icon {
+            position: absolute;
+            right: 1.5rem;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 2rem;
+            opacity: 0.2;
+        }
+        
+        .card-body {
+            padding: 1.5rem;
+        }
+        
+        .card-body ul {
+            list-style-type: none;
+        }
+        
+        .card-body li {
+            padding: 0.5rem 0;
+            position: relative;
+            padding-left: 1.5rem;
+        }
+        
+        .card-body li::before {
+            content: "→";
+            position: absolute;
+            left: 0;
+            color: var(--accent);
+        }
+        
+        .card-footer {
+            padding: 1rem 1.5rem;
+            background-color: var(--off-white);
+            border-top: 1px solid #ddd;
+            text-align: right;
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 0.6rem 1.2rem;
+            background-color: var(--accent);
+            color: var(--deep-blue);
+            text-decoration: none;
+            border-radius: 4px;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+            border: none;
+            cursor: pointer;
+        }
+        
+        .btn:hover {
+            background-color: #e68a00;
+        }
+        
+        .btn-outline {
+            background-color: transparent;
+            border: 2px solid var(--accent);
+            color: var(--accent);
+        }
+        
+        .btn-outline:hover {
+            background-color: var(--accent);
+            color: var(--white);
+        }
+        
+        .testimonials {
+            margin: 3rem 0;
+            padding: 2rem;
+            background-color: var(--deep-blue);
+            color: var(--white);
+            border-radius: 8px;
+        }
+        
+        .testimonials h2 {
+            text-align: center;
+            margin-bottom: 2rem;
+            color: var(--white);
+        }
+        
+        .testimonial-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+        
+        .testimonial-card {
+            background-color: rgba(255, 255, 255, 0.1);
+            padding: 1.5rem;
+            border-radius: 8px;
+            position: relative;
+        }
+        
+        .testimonial-card::before {
+            content: """;
+            font-family: Georgia, serif;
+            font-size: 4rem;
+            color: rgba(255, 255, 255, 0.1);
+            position: absolute;
+            top: -1rem;
+            left: 0.5rem;
+        }
+        
+        .testimonial-content {
+            margin-bottom: 1rem;
+            font-style: italic;
+        }
+        
+        .testimonial-author {
+            font-weight: bold;
+            text-align: right;
+        }
+        
+        .cta-section {
+            text-align: center;
+            padding: 3rem 0;
+            background: linear-gradient(135deg, var(--light-blue), var(--deep-blue));
+            color: var(--white);
+            border-radius: 8px;
+            margin-bottom: 2rem;
+        }
+        
+        .cta-section h2 {
+            margin-bottom: 1.5rem;
+            font-size: 2rem;
+        }
+        
+        .cta-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+        
+        footer {
+            background-color: var(--deep-blue);
+            color: var(--white);
+            padding: 2rem 0;
+            text-align: center;
+        }
+        
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            text-align: left;
+        }
+        
+        .footer-column h3 {
+            margin-bottom: 1rem;
+            position: relative;
+            padding-bottom: 0.5rem;
+        }
+        
+        .footer-column h3::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 50px;
+            height: 2px;
+            background-color: var(--accent);
+        }
+        
+        .footer-column ul {
+            list-style-type: none;
+        }
+        
+        .footer-column li {
+            margin-bottom: 0.5rem;
+        }
+        
+        .footer-column a {
+            color: var(--white);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        
+        .footer-column a:hover {
+            color: var(--accent);
+        }
+        
+        .copyright {
+            margin-top: 2rem;
+            padding-top: 1rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem;
+            }
+            
+            .tagline {
+                font-size: 1rem;
+            }
+            
+            .resources-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .cta-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+        
+        /* Special Ghanaian elements */
+        .ghanaian-flag-theme {
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 100px;
+            height: 60px;
+            background: linear-gradient(to bottom, 
+                red 33%, 
+                yellow 33%, 
+                yellow 66%, 
+                green 66%);
+            opacity: 0.1;
+            z-index: 0;
+        }
+        
+        .ghanaian-pattern {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 20px;
+            background: repeating-linear-gradient(
+                45deg,
+                var(--accent),
+                var(--accent) 10px,
+                var(--deep-blue) 10px,
+                var(--deep-blue) 20px
+            );
+            opacity: 0.2;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="ghanaian-flag-theme"></div>
+        <div class="header-content">
+            <h1>Career Preparation <span class="ghana-flag"></span> Ghana</h1>
+            <p class="tagline">Empowering Ghanaian professionals with the tools for career success</p>
+            <a href="#resources" class="btn">Explore Resources</a>
+        </div>
+        <div class="ghanaian-pattern"></div>
+    </header>
+    
+    <div class="container">
+        <section class="intro">
+            <h2>Your Pathway to Professional Success in Ghana</h2>
+            <p>Navigating the Ghanaian job market requires specific skills and knowledge. Whether you're a fresh graduate, mid-career professional, or looking to switch industries, our comprehensive resources are tailored to the unique needs of Ghanaian job seekers.</p>
+        </section>
+        
+        <section id="resources" class="resources-grid">
+            <div class="resource-card">
+                <div class="card-header">
+                    <h3>CV & Cover Letter Templates</h3>
+                    <div class="card-icon">📄</div>
+                </div>
+                <div class="card-body">
+                    <ul>
+                        <li>Ghanaian-style CV templates (ATS compliant)</li>
+                        <li>Industry-specific cover letter samples</li>
+                        <li>How to highlight Ghanaian work experience</li>
+                        <li>Local references formatting</li>
+                        <li>Bilingual (English/French) CV options</li>
+                    </ul>
+                </div>
+                <div class="card-footer">
+                    <a href="https://docs.google.com/document/d/1GPOXPprM9p7XugYd36zcqxinScbVrSZ68Sqv7I1wG5Y/edit" class="btn btn-outline">Download Templates</a>
+                </div>
+            </div>
+            
+            <div class="resource-card">
+                <div class="card-header">
+                    <h3>Interview Preparation</h3>
+                    <div class="card-icon">💼</div>
+                </div>
+                <div class="card-body">
+                    <ul>
+                        <li>Common interview questions in Ghana</li>
+                        <li>Cultural expectations in Ghanaian interviews</li>
+                        <li>Salary negotiation for Ghanaian market</li>
+                        <li>Virtual interview tips (for diaspora)</li>
+                        <li>Dress code guidelines for Ghana</li>
+                    </ul>
+                </div>
+                <div class="card-footer">
+                    <a href="https://docs.google.com/document/d/1GgU0Yr8RTs6PDZmq11FhMbvXNJG7loZf7s1C4CByj7I/edit" class="btn btn-outline">Prepare Now</a>
+                </div>
+            </div>
+            
+            <div class="resource-card">
+                <div class="card-header">
+                    <h3>Internship Opportunities</h3>
+                    <div class="card-icon">🎓</div>
+                </div>
+                <div class="card-body">
+                    <ul>
+                        <li>Current internships in Accra, Kumasi & beyond</li>
+                        <li>National Service placement tips</li>
+                        <li>Corporate vs NGO internships</li>
+                        <li>How to convert internship to full-time</li>
+                        <li>Remote internship options</li>
+                    </ul>
+                </div>
+                <div class="card-footer">
+                    <a href="https://docs.google.com/document/d/1HRxImFrw3PKbF6EfNEPHVKG6PWmfDLRrj2FGETM4QPk/edit" class="btn btn-outline">Find Internships</a>
+                </div>
+            </div>
+            
+            <div class="resource-card">
+                <div class="card-header">
+                    <h3>Career Path Exploration</h3>
+                    <div class="card-icon">🧭</div>
+                </div>
+                <div class="card-body">
+                    <ul>
+                        <li>Growing industries in Ghana</li>
+                        <li>Salary benchmarks by sector</li>
+                        <li>Professional certifications in Ghana</li>
+                        <li>Entrepreneurship vs employment</li>
+                        <li>Diaspora return opportunities</li>
+                    </ul>
+                </div>
+                <div class="card-footer">
+                    <a href="https://docs.google.com/document/d/1HtSkb12Pn5a4tzVapPimVo_8ULP4xh3W9QxnrPzqFQ4/edit" class="btn btn-outline">Explore Paths</a>
+                </div>
+            </div>
+            
+            <div class="resource-card">
+                <div class="card-header">
+                    <h3>Networking & Mentorship</h3>
+                    <div class="card-icon">🤝</div>
+                </div>
+                <div class="card-body">
+                    <ul>
+                        <li>Professional associations in Ghana</li>
+                        <li>Upcoming career fairs</li>
+                        <li>Finding mentors in your field</li>
+                        <li>LinkedIn optimization for Ghana</li>
+                        <li>Alumni networks of Ghanaian schools</li>
+                    </ul>
+                </div>
+                <div class="card-footer">
+                    <a href="https://docs.google.com/document/d/1IQbsjQBrbTh7CaKU47x2mCXBwTmVGGFt_-8ibnKXQs0/edit" class="btn btn-outline">Connect Now</a>
+                </div>
+            </div>
+            
+            <div class="resource-card">
+                <div class="card-header">
+                    <h3>Further Education</h3>
+                    <div class="card-icon">🎓</div>
+                </div>
+                <div class="card-body">
+                    <ul>
+                        <li>Top Ghanaian universities by program</li>
+                        <li>Scholarships for Ghanaian students</li>
+                        <li>Professional short courses in Ghana</li>
+                        <li>Online learning options with local recognition</li>
+                        <li>Study abroad returning to Ghana</li>
+                    </ul>
+                </div>
+                <div class="card-footer">
+                    <a href="https://docs.google.com/document/d/1K57JVFiDXtwGoJ3AdUoGlkfwwJQKJebaDMZzDGM_qB8/edit" class="btn btn-outline">Learn More</a>
+                </div>
+            </div>
+        </section>
+        
+        <section class="testimonials">
+            <h2>Success Stories from Ghana</h2>
+            <div class="testimonial-grid">
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        "Using the Ghana-specific CV template helped me stand out in my applications. I got three interview invitations within two weeks of updating my CV!"
+                    </div>
+                    <div class="testimonial-author">Osman Farouq, Kumasi</div>
+                </div>
+                
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        "The interview preparation guide gave me insights into cultural expectations I didn't know about as a returnee from the UK. It made all the difference!"
+                    </div>
+                    <div class="testimonial-author">- Kwame B., Obuasi</div>
+                </div>
+                
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        "I found my current internship through this platform. The guidance on how to transition to full-time was invaluable - I start my permanent role next month!"
+                    </div>
+                    <div class="testimonial-author">- Efua T., Yeji B/E</div>
+                </div>
+            </div>
+        </section>
+
+<!--
+        
+        <section class="cta-section">
+            <h2>Ready to Advance Your Career in Ghana?</h2>
+            <p>Join thousands of Ghanaian professionals who have successfully navigated their career paths with our resources.</p>
+            <div class="cta-buttons">
+                <a href="#" class="btn">Get Started Today</a>
+                <a href="#" class="btn btn-outline">Speak to a Career Advisor</a>
+            </div>
+        </section>
+    </div>
+-->
+    
+    <footer>
+        <div class="footer-content">
+            <div class="footer-column">
+
+<!--
+                <h3>Resources</h3>
+                <ul>
+                    <li><a href="#">CV Templates</a></li>
+                    <li><a href="#">Interview Prep</a></li>
+                    <li><a href="#">Job Search</a></li>
+                    <li><a href="#">Career Guides</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-column">
+                <h3>Ghana Focus</h3>
+                <ul>
+                    <li><a href="#">Accra Job Market</a></li>
+                    <li><a href="#">Kumasi Opportunities</a></li>
+                    <li><a href="#">Regional Jobs</a></li>
+                    <li><a href="#">Diaspora Resources</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-column">
+                <h3>Support</h3>
+                <ul>
+                    <li><a href="#">FAQs</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">Feedback</a></li>
+                    <li><a href="#">Partnerships</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-column">
+                <h3>Connect</h3>
+                <ul>
+                    <li><a href="#">LinkedIn</a></li>
+                    <li><a href="#">Twitter</a></li>
+                    <li><a href="#">Facebook</a></li>
+                    <li><a href="#">WhatsApp Community</a></li>
+                </ul>
+            </div>
+        </div>
+
+-->
+        
+        <div class="copyright">
+            &copy; 2023 Azz Internet Hub. All rights reserved.
+        </div>
+    </footer>
+    
+    <script>
+        // Simple JavaScript for enhanced interactivity
+        document.addEventListener('DOMContentLoaded', function() {
+            // Smooth scrolling for anchor links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    
+                    document.querySelector(this.getAttribute('href')).scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                });
+            });
+            
+            // Animate cards when they come into view
+            const observerOptions = {
+                threshold: 0.1
+            };
+            
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = 1;
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            }, observerOptions);
+            
+            document.querySelectorAll('.resource-card').forEach(card => {
+                card.style.opacity = 0;
+                card.style.transform = 'translateY(20px)';
+                card.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+                observer.observe(card);
+            });
+            
+            // Ghanaian-themed console message
+            console.log('%cAkwaaba to Career Preparation Ghana! 🇬🇭', 'color: #006b3f; font-size: 16px; font-weight: bold;');
+            console.log('%cLet us help you build a successful career in Ghana!', 'color: #fcd116; font-size: 14px;');
+        });
+        
+        // Function to handle newsletter signup (placeholder)
+        function handleNewsletterSignup() {
+            const email = document.getElementById('newsletter-email').value;
+            if (email) {
+                alert('Medaase! You\'ve been added to our newsletter for Ghanaian career opportunities.');
+                // In a real implementation, you would send this to your backend
+            }
+        }
+    </script>
+</body>
+</html>

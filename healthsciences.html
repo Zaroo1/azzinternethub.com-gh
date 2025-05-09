@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Health & Science Resources | AZZ INTERNET HUB</title>
+    <style>
+        /* AZZ INTERNET HUB Theme */
+        :root {
+            --primary: #0a1f3d;
+            --secondary: #1a4b8c;
+            --accent: #3a7bd5;
+            --text: #ffffff;
+            --bg: #f5f9ff;
+            --highlight: #ffd700;
+            --health: #e63946;
+            --science: #2a9d8f;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--bg);
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        header {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: var(--text);
+            padding: 2rem 0;
+            text-align: center;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+        
+        h1 {
+            margin: 0;
+            font-size: 2.5rem;
+        }
+        
+        .subtitle {
+            font-weight: 300;
+            opacity: 0.9;
+            margin-top: 0.5rem;
+        }
+        
+        .hero-banner {
+            background: linear-gradient(rgba(10, 31, 61, 0.9), rgba(10, 31, 61, 0.9)), 
+                        url('https://images.unsplash.com/photo-1576091160550-2173dba999ef?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+            background-size: cover;
+            color: white;
+            text-align: center;
+            padding: 4rem 1rem;
+            margin: 2rem 0;
+            border-radius: 8px;
+        }
+        
+        .hero-banner h2 {
+            font-size: 2.2rem;
+            margin-top: 0;
+        }
+        
+        .container {
+            max-width: 1000px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+        
+        .category-tabs {
+            display: flex;
+            margin-bottom: 2rem;
+            border-bottom: 2px solid #ddd;
+        }
+        
+        .tab-btn {
+            padding: 12px 24px;
+            background: none;
+            border: none;
+            cursor: pointer;
+            font-size: 1rem;
+            font-weight: bold;
+            color: var(--primary);
+            position: relative;
+            margin-right: 5px;
+        }
+        
+        .tab-btn.active {
+            color: var(--accent);
+        }
+        
+        .tab-btn.active:after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background: var(--accent);
+        }
+        
+        .tab-content {
+            display: none;
+        }
+        
+        .tab-content.active {
+            display: block;
+        }
+        
+        .resource-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+        
+        .resource-card {
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+            transition: all 0.3s ease;
+            border-top: 4px solid var(--accent);
+        }
+        
+        .health-card {
+            border-top-color: var(--health);
+        }
+        
+        .science-card {
+            border-top-color: var(--science);
+        }
+        
+        .resource-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(10, 31, 61, 0.15);
+        }
+        
+        .card-body {
+            padding: 1.5rem;
+        }
+        
+        .card-body h3 {
+            margin-top: 0;
+            color: var(--primary);
+        }
+        
+        .price-tag {
+            background: var(--accent);
+            color: white;
+            padding: 5px 10px;
+            border-radius: 4px;
+            font-weight: bold;
+            display: inline-block;
+            margin-top: 1rem;
+        }
+        
+        .btn {
+            display: inline-block;
+            background: var(--accent);
+            color: white;
+            padding: 10px 20px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: bold;
+            margin-top: 1rem;
+            transition: all 0.3s ease;
+        }
+        
+        .health-btn {
+            background: var(--health);
+        }
+        
+        .science-btn {
+            background: var(--science);
+        }
+        
+        .btn:hover {
+            opacity: 0.9;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        
+        .ghana-focus {
+            background: white;
+            border-radius: 8px;
+            padding: 2rem;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+            margin: 3rem 0;
+            border-left: 4px solid var(--accent);
+        }
+        
+        footer {
+            background: var(--primary);
+            color: var(--text);
+            text-align: center;
+            padding: 2rem 0;
+            margin-top: 3rem;
+        }
+        
+        @media (max-width: 768px) {
+            .resource-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .category-tabs {
+                flex-wrap: wrap;
+            }
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <h1>AZZ INTERNET HUB</h1>
+        <p class="subtitle">Health & Science Education Resources</p>
+    </header>
+    
+    <div class="container">
+        <div class="hero-banner">
+            <h2>Advancing Health & Science Education in Ghana</h2>
+            <p>Access premium resources for medical, nursing, and STEM students</p>
+            <a href="#resources" class="btn">Explore Resources</a>
+        </div>
+        
+        <div class="category-tabs">
+            <button class="tab-btn active" data-tab="health">Health Resources</button>
+            <button class="tab-btn" data-tab="science">Science Resources</button>
+            <button class="tab-btn" data-tab="ghana">Ghana Focus</button>
+        </div>
+        
+        <div id="resources">
+            <!-- Health Resources Tab -->
+            <div id="health-tab" class="tab-content active">
+                <h2><i class="fas fa-heartbeat" style="color: var(--health);"></i> Health Education</h2>
+                <p>Resources for medical, nursing, and public health students in Ghana</p>
+                
+                <div class="resource-grid">
+                    <!-- Health Card 1 -->
+                    <div class="resource-card health-card">
+                        <div class="card-body">
+                            <h3>Medical School Prep</h3>
+                            <p>Complete guide to Ghanaian medical school admissions with past questions</p>
+                            <div class="price-tag">250 GHS</div>
+                            <a href="#" class="btn health-btn">Get Resource</a>
+                        </div>
+                    </div>
+                    
+                    <!-- Health Card 2 -->
+                    <div class="resource-card health-card">
+                        <div class="card-body">
+                            <h3>Anatomy Flashcards</h3>
+                            <p>500+ digital flashcards for human anatomy studies</p>
+                            <div class="price-tag">180 GHS</div>
+                            <a href="#" class="btn health-btn">Get Flashcards</a>
+                        </div>
+                    </div>
+                    
+                    <!-- Health Card 3 -->
+                    <div class="resource-card health-card">
+                        <div class="card-body">
+                            <h3>Clinical Rotation Guide</h3>
+                            <p>Survival guide for nursing/medical clinical rotations in Ghana</p>
+                            <div class="price-tag">200 GHS</div>
+                            <a href="#" class="btn health-btn">Get Guide</a>
+                        </div>
+                    </div>
+                    
+                    <!-- Health Card 4 -->
+                    <div class="resource-card health-card">
+                        <div class="card-body">
+                            <h3>Tropical Medicine Handbook</h3>
+                            <p>Digital handbook focusing on diseases prevalent in West Africa</p>
+                            <div class="price-tag">300 GHS</div>
+                            <a href="#" class="btn health-btn">Download</a>
+                        </div>
+                    </div>
+                    
+                    <!-- Health Card 5 -->
+                    <div class="resource-card health-card">
+                        <div class="card-body">
+                            <h3>Medical Spanish Course</h3>
+                            <p>Essential Spanish for healthcare professionals (for Cuban rotations)</p>
+                            <div class="price-tag">150 GHS</div>
+                            <a href="#" class="btn health-btn">Enroll Now</a>
+                        </div>
+                    </div>
+                    
+                    <!-- Health Card 6 -->
+                    <div class="resource-card health-card">
+                        <div class="card-body">
+                            <h3>NCLEX/RGN Prep</h3>
+                            <p>Practice tests and study materials for nursing exams</p>
+                            <div class="price-tag">220 GHS</div>
+                            <a href="#" class="btn health-btn">Start Prep</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Science Resources Tab -->
+            <div id="science-tab" class="tab-content">
+                <h2><i class="fas fa-atom" style="color: var(--science);"></i> Science Education</h2>
+                <p>STEM resources for university and secondary school students</p>
+                
+                <div class="resource-grid">
+                    <!-- Science Card 1 -->
+                    <div class="resource-card science-card">
+                        <div class="card-body">
+                            <h3>WASSCE Science Prep</h3>
+                            <p>Comprehensive physics, chemistry, biology revision package</p>
+                            <div class="price-tag">150 GHS</div>
+                            <a href="#" class="btn science-btn">Get Package</a>
+                        </div>
+                    </div>
+                    
+                    <!-- Science Card 2 -->
+                    <div class="resource-card science-card">
+                        <div class="card-body">
+                            <h3>Python for Science</h3>
+                            <p>Introduction to Python programming for scientific computing</p>
+                            <div class="price-tag">200 GHS</div>
+                            <a href="#" class="btn science-btn">Start Course</a>
+                        </div>
+                    </div>
+                    
+                    <!-- Science Card 3 -->
+                    <div class="resource-card science-card">
+                        <div class="card-body">
+                            <h3>Research Methods Guide</h3>
+                            <p>Step-by-step guide to scientific research and thesis writing</p>
+                            <div class="price-tag">180 GHS</div>
+                            <a href="#" class="btn science-btn">Get Guide</a>
+                        </div>
+                    </div>
+                    
+                    <!-- Science Card 4 -->
+                    <div class="resource-card science-card">
+                        <div class="card-body">
+                            <h3>STEM Career Paths</h3>
+                            <p>Guide to STEM careers available to Ghanaian graduates</p>
+                            <div class="price-tag">120 GHS</div>
+                            <a href="#" class="btn science-btn">Explore</a>
+                        </div>
+                    </div>
+                    
+                    <!-- Science Card 5 -->
+                    <div class="resource-card science-card">
+                        <div class="card-body">
+                            <h3>Lab Techniques Videos</h3>
+                            <p>Library of essential laboratory techniques and protocols</p>
+                            <div class="price-tag">250 GHS</div>
+                            <a href="#" class="btn science-btn">Access Videos</a>
+                        </div>
+                    </div>
+                    
+                    <!-- Science Card 6 -->
+                    <div class="resource-card science-card">
+                        <div class="card-body">
+                            <h3>Science Competition Prep</h3>
+                            <p>Resources for National Science & Maths Quiz preparation</p>
+                            <div class="price-tag">170 GHS</div>
+                            <a href="#" class="btn science-btn">Prepare Now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Ghana Focus Tab -->
+            <div id="ghana-tab" class="tab-content">
+                <div class="ghana-focus">
+                    <h2><i class="fas fa-map-marker-alt"></i> Ghana-Focused Health & Science</h2>
+                    <p>Special resources addressing Ghana's specific health and science education needs</p>
+                    
+                    <div class="resource-grid">
+                        <!-- Ghana Card 1 -->
+                        <div class="resource-card">
+                            <div class="card-body">
+                                <h3>Ghana Health System Guide</h3>
+                                <p>Comprehensive overview of Ghana's healthcare system structure</p>
+                                <div class="price-tag">Free</div>
+                                <a href="#" class="btn">Download</a>
+                            </div>
+                        </div>
+                        
+                        <!-- Ghana Card 2 -->
+                        <div class="resource-card">
+                            <div class="card-body">
+                                <h3>Local Disease Atlas</h3>
+                                <p>Visual guide to diseases endemic to Ghana</p>
+                                <div class="price-tag">150 GHS</div>
+                                <a href="#" class="btn">Get Atlas</a>
+                            </div>
+                        </div>
+                        
+                        <!-- Ghana Card 3 -->
+                        <div class="resource-card">
+                            <div class="card-body">
+                                <h3>Ghana Research Database</h3>
+                                <p>Collection of science research by Ghanaian institutions</p>
+                                <div class="price-tag">200 GHS/year</div>
+                                <a href="#" class="btn">Access Database</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <h3 style="margin-top: 2rem;">Ghanaian Health Institutions Guide</h3>
+                    <ul>
+                        <li>Teaching Hospitals overview</li>
+                        <li>Research centers and their specialties</li>
+                        <li>Accredited medical/nursing schools</li>
+                        <li>Government health initiatives</li>
+                    </ul>
+                    <a href="#" class="btn">View Full Guide (80 GHS)</a>
+                </div>
+            </div>
+        </div>
+        
+        <div style="text-align: center; margin: 3rem 0;">
+            <h3>Why Our Health & Science Resources?</h3>
+            <p>• <strong>Locally relevant</strong> content for Ghanaian students<br>
+               • <strong>Affordable pricing</strong> for students and professionals<br>
+               • <strong>Digital access</strong> from anywhere in Ghana<br>
+               • <strong>Quality</strong> verified by educators</p>
+        </div>
+    </div>
+    
+    <footer>
+        <p>&copy; 2023 AZZ INTERNET HUB. All rights reserved.</p>
+        <p>Advancing health and science education in Ghana</p>
+    </footer>
+
+    <script>
+        // Tab functionality
+        const tabBtns = document.querySelectorAll('.tab-btn');
+        const tabContents = document.querySelectorAll('.tab-content');
+        
+        tabBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                const tabId = btn.getAttribute('data-tab');
+                
+                // Remove active class from all buttons and contents
+                tabBtns.forEach(btn => btn.classList.remove('active'));
+                tabContents.forEach(content => content.classList.remove('active'));
+                
+                // Add active class to clicked button and corresponding content
+                btn.classList.add('active');
+                document.getElementById(`${tabId}-tab`).classList.add('active');
+            });
+        });
+        
+        // Resource card interaction
+        document.querySelectorAll('.btn').forEach(btn => {
+            btn.addEventListener('click', function(e) {
+                if (!this.getAttribute('href') || this.getAttribute('href') === '#') {
+                    e.preventDefault();
+                    const resource = this.closest('.resource-card').querySelector('h3').textContent;
+                    alert(`Thank you for your interest in our ${resource}! Our team will contact you with access details.`);
+                }
+            });
+        });
+    </script>
+</body>
+</html>

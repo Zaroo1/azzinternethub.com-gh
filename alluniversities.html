@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ghana Universities Directory | AZZ INTERNET HUB</title>
+    <style>
+        /* AZZ INTERNET HUB Theme */
+        :root {
+            --primary: #0a1f3d;
+            --secondary: #1a4b8c;
+            --accent: #3a7bd5;
+            --text: #ffffff;
+            --bg: #f5f9ff;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--bg);
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        header {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: var(--text);
+            padding: 2rem 0;
+            text-align: center;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+        
+        h1 {
+            margin: 0;
+            font-size: 2.5rem;
+        }
+        
+        .subtitle {
+            font-weight: 300;
+            opacity: 0.9;
+            margin-top: 0.5rem;
+        }
+        
+        .mission-section {
+            background: white;
+            padding: 2rem;
+            margin: 2rem auto;
+            max-width: 1000px;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+        }
+        
+        .mission-section h2 {
+            color: var(--primary);
+            border-bottom: 2px solid var(--accent);
+            padding-bottom: 0.5rem;
+            display: inline-block;
+        }
+        
+        .container {
+            max-width: 1000px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+        
+        .category {
+            margin: 3rem 0 1.5rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid var(--accent);
+            color: var(--primary);
+        }
+        
+        .institution-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 3rem;
+        }
+        
+        .institution-card {
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+            transition: all 0.3s ease;
+            position: relative;
+            padding-left: 15px;
+        }
+        
+        .institution-card::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 5px;
+            background: var(--accent);
+        }
+        
+        .institution-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(10, 31, 61, 0.15);
+        }
+        
+        .card-header {
+            padding: 1rem 1rem 0;
+        }
+        
+        .card-header h3 {
+            margin: 0;
+            color: var(--primary);
+        }
+        
+        .card-body {
+            padding: 0 1rem 1rem;
+        }
+        
+        .location {
+            color: var(--secondary);
+            font-weight: 500;
+            margin: 0.5rem 0;
+            display: flex;
+            align-items: center;
+        }
+        
+        .ghana-flag {
+            width: 20px;
+            margin-right: 8px;
+            border-radius: 2px;
+        }
+        
+        .type-badge {
+            display: inline-block;
+            background: var(--accent);
+            color: white;
+            padding: 3px 8px;
+            border-radius: 4px;
+            font-size: 0.7rem;
+            margin-top: 0.5rem;
+            text-transform: uppercase;
+        }
+        
+        footer {
+            background: var(--primary);
+            color: var(--text);
+            text-align: center;
+            padding: 2rem 0;
+            margin-top: 3rem;
+        }
+        
+        @media (max-width: 768px) {
+            .institution-list {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>AZZ INTERNET HUB</h1>
+        <p class="subtitle">Comprehensive educational resources for students in Ghana</p>
+    </header>
+    
+    <div class="mission-section">
+        <div class="container">
+            <h2>Our Mission</h2>
+            <p>To provide accessible, affordable, and professional digital solutions that empower students and academic institutions to thrive in the digital age. We are here to make online deals accessible to everyone out there.</p>
+        </div>
+    </div>
+    
+    <div class="container">
+        <h2 class="category">Public Universities</h2>
+        <div class="institution-list" id="public-universities">
+            <!-- Public universities will be loaded here -->
+        </div>
+        
+        <h2 class="category">Technical Universities</h2>
+        <div class="institution-list" id="technical-universities">
+            <!-- Technical universities will be loaded here -->
+        </div>
+        
+        <h2 class="category">Private Universities</h2>
+        <div class="institution-list" id="private-universities">
+            <!-- Private universities will be loaded here -->
+        </div>
+        
+        <h2 class="category">Colleges of Education</h2>
+        <div class="institution-list" id="colleges-of-education">
+            <!-- Colleges of education will be loaded here -->
+        </div>
+    </div>
+    
+    <footer>
+        <p>&copy; 2023 AZZ INTERNET HUB. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Ghanaian institutions data
+        const institutions = {
+            public: [
+                { id: 1, name: "University of Ghana (UG)", location: "Legon, Accra" },
+                { id: 2, name: "Kwame Nkrumah University of Science and Technology (KNUST)", location: "Kumasi" },
+                { id: 3, name: "University of Cape Coast (UCC)", location: "Cape Coast" },
+                { id: 4, name: "University for Development Studies (UDS)", location: "Tamale" },
+                { id: 5, name: "University of Education, Winneba (UEW)", location: "Winneba" },
+                { id: 6, name: "University of Mines and Technology (UMaT)", location: "Tarkwa" },
+                { id: 7, name: "University of Health and Allied Sciences (UHAS)", location: "Ho" },
+                { id: 8, name: "University of Energy and Natural Resources (UENR)", location: "Sunyani" },
+                { id: 9, name: "Ghana Institute of Management and Public Administration (GIMPA)", location: "Accra" },
+                { id: 10, name: "University of Environment and Sustainable Development (UESD)", location: "Somanya" }
+            ],
+            technical: [
+                { id: 11, name: "Accra Technical University", location: "Accra" },
+                { id: 12, name: "Kumasi Technical University", location: "Kumasi" },
+                { id: 13, name: "Takoradi Technical University", location: "Takoradi" },
+                { id: 14, name: "Koforidua Technical University", location: "Koforidua" },
+                { id: 15, name: "Sunyani Technical University", location: "Sunyani" },
+                { id: 16, name: "Cape Coast Technical University", location: "Cape Coast" },
+                { id: 17, name: "Tamale Technical University", location: "Tamale" },
+                { id: 18, name: "Ho Technical University", location: "Ho" },
+                { id: 19, name: "Bolgatanga Technical University", location: "Bolgatanga" },
+                { id: 20, name: "Wa Technical University", location: "Wa" }
+            ],
+            private: [
+                { id: 21, name: "Ashesi University", location: "Berekuso" },
+                { id: 22, name: "Valley View University", location: "Oyibi" },
+                { id: 23, name: "Central University", location: "Miotso" },
+                { id: 24, name: "Academic City University College", location: "Accra" },
+                { id: 25, name: "Lancaster University Ghana", location: "Accra" },
+                { id: 26, name: "Pentecost University", location: "Accra" },
+                { id: 27, name: "Presbyterian University", location: "Abetifi" },
+                { id: 28, name: "Regent University College of Science and Technology", location: "Accra" },
+                { id: 29, name: "Christian Service University College", location: "Kumasi" },
+                { id: 30, name: "Wisconsin International University College", location: "Accra" },
+                { id: 31, name: "Ghana Christian University College", location: "Accra" },
+                { id: 32, name: "Methodist University Ghana", location: "Dansoman" },
+                { id: 33, name: "Dominion University College", location: "Accra" },
+                { id: 34, name: "Knutsford University College", location: "Accra" },
+                { id: 35, name: "African University College of Communications (AUCC)", location: "Accra" }
+            ],
+            colleges: [
+                { id: 36, name: "Mount Mary College of Education", location: "Somanya" },
+                { id: 37, name: "Wesley College of Education", location: "Kumasi" },
+                { id: 38, name: "Bagabaga College of Education", location: "Tamale" },
+                { id: 39, name: "St. Louis College of Education", location: "Kumasi" },
+                { id: 40, name: "Presbyterian College of Education", location: "Akropong" },
+                { id: 41, name: "Gbewaa College of Education", location: "Pusiga" },
+                { id: 42, name: "St. Monica's College of Education", location: "Mampong" },
+                { id: 43, name: "Berekum College of Education", location: "Berekum" },
+                { id: 44, name: "E.P. College of Education", location: "Amedzofe" },
+                { id: 45, name: "OLA College of Education", location: "Cape Coast" },
+                { id: 46, name: "Tamale College of Education", location: "Tamale" },
+                { id: 47, name: "Mampong Technical College of Education", location: "Mampong" },
+                { id: 48, name: "Foso College of Education", location: "Assin Foso" },
+                { id: 49, name: "Dambai College of Education", location: "Dambai" },
+                { id: 50, name: "Jasikan College of Education", location: "Jasikan" }
+            ]
+        };
+
+        // Render institutions by category
+        function renderInstitutions() {
+            renderCategory('public', 'Public University');
+            renderCategory('technical', 'Technical University');
+            renderCategory('private', 'Private University');
+            renderCategory('colleges', 'College of Education');
+        }
+        
+        function renderCategory(category, type) {
+            const element = document.getElementById(`${category}-universities`);
+            if (!element) return;
+            
+            element.innerHTML = '';
+            
+            institutions[category].forEach(inst => {
+                const flagURL = `https://flagcdn.com/20x15/gh.png`;
+                
+                element.innerHTML += `
+                    <div class="institution-card">
+                        <div class="card-header">
+                            <h3>${inst.name}</h3>
+                            <span class="type-badge">${type}</span>
+                        </div>
+                        <div class="card-body">
+                            <p class="location">
+                                <img src="${flagURL}" alt="Ghana Flag" class="ghana-flag">
+                                ${inst.location}
+                            </p>
+                        </div>
+                    </div>
+                `;
+            });
+        }
+        
+        // Initial render
+        renderInstitutions();
+    </script>
+</body>
+</html>

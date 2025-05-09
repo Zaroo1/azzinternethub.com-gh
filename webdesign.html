@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Professional Web Design Services | AZZ INTERNET HUB</title>
+    <style>
+        /* === GLOBAL STYLES (Blue & White Theme) === */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        /* === HEADER === */
+        header {
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            color: white;
+            padding: 60px 0;
+            text-align: center;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+        
+        header h1 {
+            font-size: 2.8em;
+            margin: 0;
+            animation: fadeIn 1.5s ease-in-out;
+        }
+        
+        header p {
+            font-size: 1.2em;
+            opacity: 0.9;
+            margin: 10px 0 0;
+        }
+        
+        /* === SERVICES SECTION === */
+        .services {
+            padding: 50px 0;
+            text-align: center;
+        }
+        
+        .services h2 {
+            color: #1e3c72;
+            font-size: 2.2em;
+            margin-bottom: 30px;
+            position: relative;
+            display: inline-block;
+        }
+        
+        .services h2:after {
+            content: '';
+            position: absolute;
+            width: 50%;
+            height: 3px;
+            background: #2a5298;
+            bottom: -10px;
+            left: 25%;
+            border-radius: 3px;
+        }
+        
+        .service-list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 30px;
+        }
+        
+        .service-item {
+            background: white;
+            border-radius: 10px;
+            padding: 25px;
+            width: 280px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        
+        .service-item:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .service-item i {
+            font-size: 2.5em;
+            color: #2a5298;
+            margin-bottom: 15px;
+            display: block;
+        }
+        
+        /* === PRICING TABLE === */
+        .pricing {
+            background: #f0f4f8;
+            padding: 60px 0;
+            text-align: center;
+        }
+        
+        .pricing h2 {
+            color: #1e3c72;
+            font-size: 2.2em;
+            margin-bottom: 40px;
+        }
+        
+        .pricing-table {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 25px;
+        }
+        
+        .pricing-card {
+            background: white;
+            border-radius: 10px;
+            width: 300px;
+            padding: 30px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+            transition: all 0.3s;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .pricing-card:hover {
+            transform: scale(1.03);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+        }
+        
+        .pricing-card.popular {
+            border: 2px solid #2a5298;
+        }
+        
+        .popular-tag {
+            position: absolute;
+            top: 15px;
+            right: -30px;
+            background: #2a5298;
+            color: white;
+            padding: 5px 30px;
+            transform: rotate(45deg);
+            font-size: 0.8em;
+        }
+        
+        .price {
+            font-size: 2.5em;
+            color: #1e3c72;
+            margin: 20px 0;
+        }
+        
+        .price span {
+            font-size: 0.5em;
+            color: #666;
+        }
+        
+        .features {
+            list-style: none;
+            padding: 0;
+            margin: 25px 0;
+            text-align: left;
+        }
+        
+        .features li {
+            padding: 8px 0;
+            position: relative;
+            padding-left: 25px;
+        }
+        
+        .features li:before {
+            content: '✓';
+            color: #2a5298;
+            position: absolute;
+            left: 0;
+            font-weight: bold;
+        }
+        
+        /* === CTA SECTION === */
+        .cta {
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            color: white;
+            padding: 70px 0;
+            text-align: center;
+        }
+        
+        .cta h2 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+        
+        .cta p {
+            font-size: 1.2em;
+            max-width: 700px;
+            margin: 0 auto 30px;
+            opacity: 0.9;
+        }
+        
+        .btn {
+            display: inline-block;
+            background: white;
+            color: #1e3c72;
+            padding: 15px 30px;
+            border-radius: 50px;
+            font-weight: bold;
+            text-decoration: none;
+            font-size: 1.1em;
+            transition: all 0.3s;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .btn:hover {
+            background: #f0f4f8;
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+        }
+        
+        /* === FOOTER === */
+        footer {
+            background: #1a1a1a;
+            color: #aaa;
+            text-align: center;
+            padding: 30px 0;
+            font-size: 0.9em;
+        }
+        
+        /* === ANIMATIONS === */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        /* === RESPONSIVE === */
+        @media (max-width: 768px) {
+            .service-list, .pricing-table {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            header h1 {
+                font-size: 2em;
+            }
+        }
+    </style>
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <!-- HEADER SECTION -->
+    <header>
+        <div class="container">
+            <h1>🚀 Professional Website Design Services</h1>
+            <p>Get a Fast, SEO-Friendly Website Tailored for Your Business!</p>
+        </div>
+    </header>
+    
+    <!-- SERVICES SECTION -->
+    <section class="services">
+        <div class="container">
+            <h2>Our Web Design Services</h2>
+            <p>We create stunning, high-performance websites that help your business grow.</p>
+            
+            <div class="service-list">
+                <div class="service-item">
+                    <i class="fas fa-laptop-code"></i>
+                    <h3>Custom Website Design</h3>
+                    <p>Beautiful, responsive websites built with HTML, CSS, JavaScript, or WordPress.</p>
+                </div>
+                
+                <div class="service-item">
+                    <i class="fas fa-shopping-cart"></i>
+                    <h3>E-Commerce Stores</h3>
+                    <p>Powerful online stores with Shopify, WooCommerce, or custom solutions.</p>
+                </div>
+                
+                <div class="service-item">
+                    <i class="fas fa-rocket"></i>
+                    <h3>Landing Pages</h3>
+                    <p>High-converting sales pages that turn visitors into customers.</p>
+                </div>
+                
+                <div class="service-item">
+                    <i class="fas fa-search"></i>
+                    <h3>SEO Optimization</h3>
+                    <p>Boost your Google rankings with our SEO-friendly development.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- PRICING SECTION -->
+    <section class="pricing">
+        <div class="container">
+            <h2>Simple, Transparent Pricing</h2>
+            <p>Choose the perfect package for your needs</p>
+            
+            <div class="pricing-table">
+                <div class="pricing-card">
+                    <h3>Basic Website</h3>
+                    <div class="price">$55 <span>/ one-time</span></div>
+                    <ul class="features">
+                        <li>5 Custom Pages</li>
+                        <li>Mobile-Friendly Design</li>
+                        <li>Contact Form</li>
+                        <li>Basic SEO Setup</li>
+                        <li>1 Week Delivery</li>
+                    </ul>
+                    <a href="#contact" class="btn">Get Started</a>
+                </div>
+                
+                <div class="pricing-card popular">
+                    <div class="popular-tag">Popular</div>
+                    <h3>Standard Website</h3>
+                    <div class="price">$68 <span>/ one-time</span></div>
+                    <ul class="features">
+                        <li>10 Custom Pages</li>
+                        <li>Blog Integration</li>
+                        <li>Advanced SEO Setup</li>
+                        <li>Social Media Integration</li>
+                        <li>2 Weeks Delivery</li>
+                    </ul>
+                    <a href="#contact" class="btn">Get Started</a>
+                </div>
+                
+                <div class="pricing-card">
+                    <h3>Premium Website</h3>
+                    <div class="price">$799+ <span>/ one-time</span></div>
+                    <ul class="features">
+                        <li>E-Commerce Functionality</li>
+                        <li>Custom Design</li>
+                        <li>Speed Optimization</li>
+                        <li>Premium Support</li>
+                        <li>3-4 Weeks Delivery</li>
+                    </ul>
+                    <a href="#contact" class="btn">Get Started</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- CTA SECTION -->
+    <section class="cta" id="contact">
+        <div class="container">
+            <h2>Ready to Launch Your Website?</h2>
+            <p>Contact us today for a free consultation. Let's build something amazing together!</p>
+            <a href="https://wa.me/+233598160732" class="btn">Get Your Website Now!</a>
+        </div>
+    </section>
+    
+    <!-- FOOTER -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2023 AZZ INTERNET HUB. All rights reserved.</p>
+        </div>
+    </footer>
+    
+    <!-- SMALL JS FOR INTERACTIVITY -->
+    <script>
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+        
+        // Animation on scroll (could be enhanced with libraries like AOS)
+        window.addEventListener('scroll', function() {
+            const elements = document.querySelectorAll('.service-item, .pricing-card');
+            elements.forEach(el => {
+                const position = el.getBoundingClientRect().top;
+                const screenPosition = window.innerHeight / 1.2;
+                
+                if(position < screenPosition) {
+                    el.style.opacity = '1';
+                    el.style.transform = 'translateY(0)';
+                }
+            });
+        });
+        
+        // Trigger initial animations
+        window.addEventListener('load', function() {
+            const services = document.querySelectorAll('.service-item');
+            services.forEach((service, index) => {
+                service.style.transitionDelay = `${index * 0.1}s`;
+                service.style.opacity = '1';
+            });
+            
+            const pricingCards = document.querySelectorAll('.pricing-card');
+            pricingCards.forEach((card, index) => {
+                card.style.transitionDelay = `${index * 0.1 + 0.3}s`;
+                card.style.opacity = '1';
+            });
+        });
+    </script>
+</body>
+</html>

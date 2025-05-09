@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Science & Tech Inventions - Azz Internet Hub</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #ffffff;
+      color: #002147;
+    }
+
+    .header {
+      background-color: #002147;
+      padding: 30px;
+      text-align: center;
+    }
+
+    .header h1, .header p {
+      color: white;
+      margin: 0;
+    }
+
+    .container {
+      padding: 40px 20px;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .section {
+      display: flex;
+      flex-wrap: wrap;
+      background-color: #f2f8ff;
+      margin-bottom: 40px;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 4px 12px rgba(0, 33, 71, 0.1);
+      opacity: 0;
+      transform: translateY(50px);
+      transition: all 0.8s ease-in-out;
+    }
+
+    .section.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .section img {
+      width: 100%;
+      max-width: 500px;
+      object-fit: cover;
+      height: auto;
+    }
+
+    .text {
+      flex: 1;
+      padding: 30px;
+    }
+
+    .text h2 {
+      margin-top: 0;
+      color: #002147;
+    }
+
+    .text p {
+      font-size: 17px;
+      line-height: 1.6;
+    }
+
+    @media (max-width: 768px) {
+      .section {
+        flex-direction: column;
+      }
+
+      .section img {
+        width: 100%;
+      }
+    }
+
+    .footer {
+      background-color: #002147;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <div class="header">
+    <h1>Azz Internet Hub</h1>
+    <p>Breaking Science & Tech Discoveries</p>
+  </div>
+
+  <!-- Content -->
+  <div class="container">
+
+    <!-- Post 1 -->
+    <div class="section">
+      <img src="https://images.unsplash.com/photo-1581091215367-59aa1bba8d5e?auto=format&fit=crop&w=800&q=60" alt="Transparent Solar Panels">
+      <div class="text">
+        <h2>Transparent Solar Panels</h2>
+        <p>Scientists have developed fully transparent solar panels that can turn windows and smartphones into power sources. This could redefine sustainable energy in cities and homes.</p>
+      </div>
+    </div>
+
+    <!-- Post 2 -->
+    <div class="section">
+      <img src="https://images.unsplash.com/photo-1617791160536-b94f2a8b5f52?auto=format&fit=crop&w=800&q=60" alt="Brain Implant">
+      <div class="text">
+        <h2>AI Brain Implants</h2>
+        <p>Neuralink has successfully implanted a chip that allows a paralyzed person to control a computer with their thoughts. This innovation opens doors to curing brain and spinal disorders.</p>
+      </div>
+    </div>
+
+    <!-- Post 3 -->
+    <div class="section">
+      <img src="https://images.unsplash.com/photo-1581092160610-7f7f7d7ef11b?auto=format&fit=crop&w=800&q=60" alt="Self-healing Concrete">
+      <div class="text">
+        <h2>Self-Healing Concrete</h2>
+        <p>A new type of concrete has been created that repairs its own cracks using bacteria and moisture. This could save billions in global infrastructure costs and increase road durability.</p>
+      </div>
+    </div>
+
+    <!-- Post 4 -->
+    <div class="section">
+      <img src="https://images.unsplash.com/photo-1600267165709-6aee058b3274?auto=format&fit=crop&w=800&q=60" alt="Smart Contact Lenses">
+      <div class="text">
+        <h2>Smart Contact Lenses</h2>
+        <p>Researchers have designed contact lenses with embedded displays that can show notifications, health data, and even record videos—straight from your eyes.</p>
+      </div>
+    </div>
+
+    <!-- Post 5 -->
+    <div class="section">
+      <img src="https://images.unsplash.com/photo-1581092913469-9cbb822d93d4?auto=format&fit=crop&w=800&q=60" alt="3D Printed Organs">
+      <div class="text">
+        <h2>3D Printed Human Organs</h2>
+        <p>Medical science is now able to 3D-print organs like kidneys and livers using patient cells, potentially eliminating transplant waiting lists forever.</p>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Footer -->
+  <div class="footer">
+    &copy; 2025 Azz Internet Hub | Science Inspires Future
+  </div>
+
+  <!-- Scroll Animation -->
+  <script>
+    const sections = document.querySelectorAll('.section');
+
+    window.addEventListener('scroll', () => {
+      sections.forEach(section => {
+        const top = section.getBoundingClientRect().top;
+        if (top < window.innerHeight - 50) {
+          section.classList.add('visible');
+        }
+      });
+    });
+
+    window.dispatchEvent(new Event('scroll'));
+  </script>
+
+</body>
+</html>

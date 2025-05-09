@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ghanaian Passport Services</title>
+    <style>
+        /* === GLOBAL STYLES === */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f9ff;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        /* === HEADER === */
+        header {
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            color: white;
+            padding: 40px 0;
+            text-align: center;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+        
+        .logo {
+            font-size: 2.2em;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        
+        .tagline {
+            font-size: 1.1em;
+            opacity: 0.9;
+            margin: 0;
+        }
+        
+        /* === MAIN CONTENT === */
+        .page-title {
+            text-align: center;
+            margin: 40px 0;
+            color: #1e3c72;
+            position: relative;
+        }
+        
+        .page-title:after {
+            content: '';
+            position: absolute;
+            width: 100px;
+            height: 3px;
+            background: #2a5298;
+            bottom: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            border-radius: 3px;
+        }
+        
+        .notice {
+            background-color: #e8f0fe;
+            border-left: 4px solid #2a5298;
+            padding: 15px;
+            margin: 30px 0;
+            border-radius: 0 4px 4px 0;
+        }
+        
+        /* === PASSPORT OPTIONS === */
+        .passport-options {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 25px;
+            margin: 40px 0;
+        }
+        
+        .passport-card {
+            background: white;
+            border-radius: 8px;
+            width: 300px;
+            padding: 30px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+            transition: all 0.3s;
+        }
+        
+        .passport-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+        }
+        
+        .passport-card.popular {
+            border: 2px solid #2a5298;
+            position: relative;
+        }
+        
+        .popular-tag {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background: #2a5298;
+            color: white;
+            padding: 3px 10px;
+            border-radius: 20px;
+            font-size: 0.8em;
+            font-weight: bold;
+        }
+        
+        .passport-type {
+            color: #1e3c72;
+            font-size: 1.5em;
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+        
+        .processing-time {
+            color: #666;
+            margin-bottom: 20px;
+            font-size: 0.95em;
+        }
+        
+        .price {
+            font-size: 2em;
+            color: #1e3c72;
+            margin: 20px 0;
+            font-weight: bold;
+        }
+        
+        .price small {
+            font-size: 0.6em;
+            color: #666;
+            font-weight: normal;
+        }
+        
+        .features {
+            list-style: none;
+            padding: 0;
+            margin: 25px 0;
+        }
+        
+        .features li {
+            padding: 8px 0;
+            position: relative;
+            padding-left: 25px;
+        }
+        
+        .features li:before {
+            content: '✓';
+            color: #2a5298;
+            position: absolute;
+            left: 0;
+            font-weight: bold;
+        }
+        
+        /* === REQUIREMENTS SECTION === */
+        .requirements {
+            background: white;
+            border-radius: 8px;
+            padding: 30px;
+            margin: 50px 0;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        }
+        
+        .requirements h3 {
+            color: #1e3c72;
+            margin-top: 0;
+        }
+        
+        .requirements ul {
+            padding-left: 20px;
+        }
+        
+        .requirements li {
+            margin-bottom: 10px;
+        }
+        
+        /* === BUTTONS === */
+        .btn {
+            display: inline-block;
+            background: #2a5298;
+            color: white;
+            padding: 12px 25px;
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s;
+            margin-top: 10px;
+            width: 100%;
+            text-align: center;
+            box-sizing: border-box;
+        }
+        
+        .btn:hover {
+            background: #1e3c72;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        
+        /* === FOOTER === */
+        footer {
+            background: #1a1a1a;
+            color: #aaa;
+            text-align: center;
+            padding: 30px 0;
+            margin-top: 50px;
+            font-size: 0.9em;
+        }
+        
+        /* === RESPONSIVE === */
+        @media (max-width: 768px) {
+            .passport-options {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .passport-card {
+                width: 100%;
+                max-width: 350px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- HEADER SECTION -->
+    <header>
+        <div class="container">
+            <div class="logo">Azz Internet Hub</div>
+            <p class="tagline">Ghanaian Passport Application Services</p>
+        </div>
+    </header>
+    
+    <!-- MAIN CONTENT -->
+    <main class="container">
+        <h1 class="page-title">Ghanaian Passport Services</h1>
+        
+        <div class="notice">
+            <strong>Important:</strong> All passport applications require biometric data capture at an official passport center. We assist with document preparation and appointment scheduling.
+        </div>
+        
+        <div class="passport-options">
+            <div class="passport-card">
+                <div class="passport-type">Standard Application</div>
+                <div class="processing-time">Processing time: 4-6 weeks</div>
+                <div class="price">GHS 450 <small>(32 pages)</small></div>
+                <div class="price">GHS 650 <small>(48 pages)</small></div>
+                
+                <ul class="features">
+                    <li>Standard processing</li>
+                    <li>Document review</li>
+                    <li>Appointment scheduling</li>
+                    <li>Application tracking</li>
+                </ul>
+                
+                <a href="https://wa.me/233598160732" class="btn">Choose Standard</a>
+            </div>
+            
+            <div class="passport-card popular">
+                <div class="popular-tag">MOST POPULAR</div>
+                <div class="passport-type">Expedited Service</div>
+                <div class="processing-time">Processing time: 2-3 weeks</div>
+                <div class="price">GHS 750 <small>(32 pages)</small></div>
+                <div class="price">GHS 950 <small>(48 pages)</small></div>
+                
+                <ul class="features">
+                    <li>Priority processing</li>
+                    <li>Expedited appointment</li>
+                    <li>Document review</li>
+                    <li>Dedicated support</li>
+                    <li>Application tracking</li>
+                </ul>
+                
+                <a href="https://wa.me/233598160732" class="btn">Choose Expedited</a>
+            </div>
+            
+            <div class="passport-card">
+                <div class="passport-type">Emergency Service</div>
+                <div class="processing-time">Processing time: 7-10 days</div>
+                <div class="price">GHS 1,200 <small>(32 pages)</small></div>
+                <div class="price">GHS 1,500 <small>(48 pages)</small></div>
+                
+                <ul class="features">
+                    <li>Emergency processing</li>
+                    <li>Immediate appointment</li>
+                    <li>VIP support</li>
+                    <li>Document review</li>
+                    <li>24/7 application tracking</li>
+                </ul>
+                
+                <a href="https://wa.me/233598160732" class="btn">Choose Emergency</a>
+            </div>
+        </div>
+        
+        <div class="requirements">
+            <h3>Required Documents</h3>
+            <ul>
+                <li>Completed application form</li>
+                <li>Original birth certificate</li>
+                <li>Ghana Card (Digital Address)</li>
+                <li>Two recent passport photos (white background)</li>
+                <li>Marriage certificate (if applicable)</li>
+                <li>Naturalization certificate (if applicable)</li>
+                <li>Old passport (for renewal)</li>
+                <li>Parental consent form (for minors)</li>
+            </ul>
+        </div>
+        
+        <div id="contact" style="text-align: center; margin: 50px 0;">
+            <h2>Ready to Apply?</h2>
+            <p>Contact us today to begin your passport application process</p>
+            <a href="https://aazzinternethub@gmail.com" class="btn" style="max-width: 300px; margin: 20px auto;">Email Us Now</a>
+            <p>Or call: <strong>+233 59 816 0732</strong></p>
+        </div>
+        
+        <div style="text-align: center;">
+            <a href="index.html" class="btn" style="max-width: 200px; background: #666;">Back to Home</a>
+        </div>
+    </main>
+    
+    <!-- FOOTER -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Azz Internet Hub. All rights reserved</p>
+            <p>Official partner of Ghana Passport Application Centers</p>
+        </div>
+    </footer>
+</body>
+</html>

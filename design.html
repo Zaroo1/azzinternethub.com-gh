@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Design Services | AZZ INTERNET HUB</title>
+    <style>
+        /* AZZ INTERNET HUB Theme */
+        :root {
+            --primary: #0a1f3d;
+            --secondary: #1a4b8c;
+            --accent: #3a7bd5;
+            --text: #ffffff;
+            --bg: #f5f9ff;
+            --highlight: #ffd700;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--bg);
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        header {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: var(--text);
+            padding: 2rem 0;
+            text-align: center;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+        
+        h1 {
+            margin: 0;
+            font-size: 2.5rem;
+        }
+        
+        .subtitle {
+            font-weight: 300;
+            opacity: 0.9;
+            margin-top: 0.5rem;
+        }
+        
+        .pricing-banner {
+            background: linear-gradient(to right, var(--primary), #0d2b57);
+            color: white;
+            text-align: center;
+            padding: 1.5rem;
+            margin: 2rem 0;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(10, 31, 61, 0.2);
+        }
+        
+        .container {
+            max-width: 1000px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+        
+        .design-categories {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        
+        .design-card {
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+            transition: all 0.3s ease;
+        }
+        
+        .design-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(10, 31, 61, 0.15);
+        }
+        
+        .card-header {
+            background: linear-gradient(to right, var(--primary), var(--secondary));
+            color: white;
+            padding: 1rem;
+            text-align: center;
+        }
+        
+        .card-body {
+            padding: 1.5rem;
+        }
+        
+        .price-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1rem 0;
+        }
+        
+        .price-table th {
+            background-color: var(--accent);
+            color: white;
+            padding: 10px;
+            text-align: left;
+        }
+        
+        .price-table td {
+            padding: 10px;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .price-table tr:nth-child(even) {
+            background-color: #f8f9fa;
+        }
+        
+        .price-table .price {
+            font-weight: bold;
+            color: var(--secondary);
+        }
+        
+        .enroll-btn {
+            display: block;
+            background: var(--accent);
+            color: white;
+            padding: 12px 24px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: bold;
+            margin: 1.5rem auto 0;
+            text-align: center;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+            font-size: 1rem;
+            width: 80%;
+        }
+        
+        .enroll-btn:hover {
+            background: var(--secondary);
+            box-shadow: 0 4px 8px rgba(58, 123, 213, 0.3);
+            transform: translateY(-2px);
+        }
+        
+        .highlight {
+            color: var(--accent);
+            font-weight: bold;
+        }
+        
+        footer {
+            background: var(--primary);
+            color: var(--text);
+            text-align: center;
+            padding: 2rem 0;
+            margin-top: 3rem;
+        }
+        
+        @media (max-width: 768px) {
+            .design-categories {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <h1>AZZ INTERNET HUB</h1>
+        <p class="subtitle">Professional Design Services in Ghana</p>
+    </header>
+    
+    <div class="container">
+        <div class="pricing-banner">
+            <h2>Custom Design Solutions</h2>
+            <p>From stunning visuals to powerful web presence - we've got you covered</p>
+        </div>
+        
+        <div class="design-categories">
+            <!-- Graphic Design Card -->
+            <div class="design-card">
+                <div class="card-header">
+                    <h2><i class="fas fa-palette"></i> Graphic Design</h2>
+                    <p>Visual communication that makes an impact</p>
+                </div>
+                <div class="card-body">
+                    <table class="price-table">
+                        <thead>
+                            <tr>
+                                <th>Service</th>
+                                <th>Description</th>
+                                <th>Price</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Logo Design</td>
+                                <td>Custom logo + 3 revisions</td>
+                                <td class="price">70 GHS</td>
+                            </tr>
+                            <tr>
+                                <td>Business Card</td>
+                                <td>Professional double-sided design</td>
+                                <td class="price">50 GHS</td>
+                            </tr>
+                            <tr>
+                                <td>Flyer Design</td>
+                                <td>Single page A5/A4 flyer</td>
+                                <td class="price">55 GHS</td>
+                            </tr>
+                            <tr>
+                                <td>Social Media Kit</td>
+                                <td>5 custom posts + profile branding</td>
+                                <td class="price">45 GHS</td>
+                            </tr>
+                            <tr>
+                                <td>Full Brand Package</td>
+                                <td>Logo, cards, letterhead + style guide</td>
+                                <td class="price">120 GHS</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <button class="enroll-btn">Get Graphic Design</button>
+                </div>
+            </div>
+            
+            <!-- Web Design Card -->
+            <div class="design-card">
+                <div class="card-header">
+                    <h2><i class="fas fa-code"></i> Web Design</h2>
+                    <p>Beautiful, functional websites that convert</p>
+                </div>
+                <div class="card-body">
+                    <table class="price-table">
+                        <thead>
+                            <tr>
+                                <th>Service</th>
+                                <th>Description</th>
+                                <th>Price</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Basic Website</td>
+                                <td>5-page responsive site</td>
+                                <td class="price">900 GHS</td>
+                            </tr>
+                            <tr>
+                                <td>Business Website</td>
+                                <td>Up to 10 pages + contact form</td>
+                                <td class="price">1,500 GHS</td>
+                            </tr>
+                            <tr>
+                                <td>E-commerce Site</td>
+                                <td>Online store with 20 products</td>
+                                <td class="price">1,800 GHS</td>
+                            </tr>
+                            <tr>
+                                <td>Website Redesign</td>
+                                <td>Modern refresh of existing site</td>
+                                <td class="price">1,500 GHS</td>
+                            </tr>
+                            <tr>
+                                
+
+<td>Custom Web App</td>                             <td>Tailored web application</td>
+                                <td class="price">5,000+ GHS</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <button class="enroll-btn">Get Web Design</button>
+                </div>
+            </div>
+        </div>
+        
+        <div style="text-align: center; margin: 3rem 0;">
+            <h3>Why Choose Our Design Services?</h3>
+            <p>• <span class="highlight">Student discounts</span> available<br>
+               • Fast turnaround times<br>
+               • Professional, modern designs<br>
+               • Free initial consultation</p>
+        </div>
+    </div>
+    
+    <footer>
+        <p>&copy; 2023 AZZ INTERNET HUB. All rights reserved.</p>
+        <p>Forge your digital destiny with us</p>
+    </footer>
+
+    <script>
+        // Interactive elements
+        document.querySelectorAll('.enroll-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                const serviceType = btn.closest('.design-card').querySelector('h2').textContent;
+                alert(`Thank you for your interest in our ${serviceType} services! Our team will contact you shortly.`);
+            });
+        });
+    </script>
+</body>
+</html>

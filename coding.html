@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coding Tutorials for beginners | AZZ INTERNET HUB</title>
+    <style>
+        /* AZZ INTERNET HUB Theme */
+        :root {
+            --primary: #0a1f3d;
+            --secondary: #1a4b8c;
+            --accent: #3a7bd5;
+            --text: #ffffff;
+            --bg: #f5f9ff;
+            --highlight: #ffd700;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--bg);
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        header {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: var(--text);
+            padding: 2rem 0;
+            text-align: center;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+        
+        h1 {
+            margin: 0;
+            font-size: 2.5rem;
+        }
+        
+        .subtitle {
+            font-weight: 300;
+            opacity: 0.9;
+            margin-top: 0.5rem;
+        }
+        
+        .price-banner {
+            background: linear-gradient(to right, var(--primary), #0d2b57);
+            color: white;
+            text-align: center;
+            padding: 1.5rem;
+            margin: 2rem 0;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(10, 31, 61, 0.2);
+        }
+        
+        .price-banner h2 {
+            margin: 0;
+            font-size: 2rem;
+        }
+        
+        .price-banner .starting-price {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: var(--highlight);
+            margin: 0.5rem 0;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+        }
+        
+        .container {
+            max-width: 1000px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+        
+        .course-categories {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        
+        .course-card {
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+            transition: all 0.3s ease;
+            position: relative;
+        }
+        
+        .course-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(10, 31, 61, 0.15);
+        }
+        
+        .card-header {
+            background: linear-gradient(to right, var(--primary), var(--secondary));
+            color: white;
+            padding: 1rem;
+        }
+        
+        .card-body {
+            padding: 1.5rem;
+        }
+        
+        .price-tag {
+            background: var(--accent);
+            color: white;
+            padding: 5px 10px;
+            border-radius: 4px;
+            font-weight: bold;
+            display: inline-block;
+            margin-top: 1rem;
+        }
+        
+        .enroll-btn {
+            display: inline-block;
+            background: var(--accent);
+            color: white;
+            padding: 10px 20px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: bold;
+            margin-top: 1rem;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+        
+        .enroll-btn:hover {
+            background: var(--secondary);
+            box-shadow: 0 4px 8px rgba(58, 123, 213, 0.3);
+        }
+        
+        footer {
+            background: var(--primary);
+            color: var(--text);
+            text-align: center;
+            padding: 2rem 0;
+            margin-top: 3rem;
+        }
+        
+        .highlight {
+            color: var(--accent);
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>AZZ INTERNET HUB</h1>
+        <p class="subtitle">Empowering your coding journey in Ghana as a beginner</p>
+    </header>
+    
+    <div class="container">
+        <div class="price-banner">
+            <h2>Start Your Coding Journey Today</h2>
+            <div class="starting-price">130 GHS</div>
+            <p>Affordable coding tutorials starting from just <span class="highlight">130 cedis</span></p>
+        </div>
+        
+        <h2>Our Coding Courses</h2>
+        <p>Choose from our range of beginner-friendly to advanced programming courses:</p>
+        
+        <div class="course-categories">
+            <div class="course-card">
+                <div class="card-header">
+                    <h3>Web Development</h3>
+                </div>
+                <div class="card-body">
+                    <p>Learn HTML, CSS, JavaScript and build responsive websites</p>
+                    <div class="price-tag">From 130 GHS</div>
+                    <button class="enroll-btn">Enroll Now</button>
+                </div>
+            </div>
+            
+
+<!--
+            <div class="course-card">
+                <div class="card-header">
+                    <h3>Python Programming</h3>
+                </div>
+                <div class="card-body">
+                    <p>Master Python for automation, data analysis and web development</p>
+                    <div class="price-tag">From 150 GHS</div>
+                    <button class="enroll-btn">Enroll Now</button>
+                </div>
+            </div>
+            
+            <div class="course-card">
+                <div class="card-header">
+                    <h3>Mobile App Development</h3>
+                </div>
+                <div class="card-body">
+                    <p>Build Android and iOS apps with Flutter or React Native</p>
+                    <div class="price-tag">From 180 GHS</div>
+                    <button class="enroll-btn">Enroll Now</button>
+                </div>
+            </div>
+            
+            <div class="course-card">
+                <div class="card-header">
+                    <h3>Data Science</h3>
+                </div>
+                <div class="card-body">
+                    <p>Learn data analysis, visualization and machine learning</p>
+                    <div class="price-tag">From 200 GHS</div>
+                    <button class="enroll-btn">Enroll Now</button>
+                </div>
+            </div>
+            
+            <div class="course-card">
+                <div class="card-header">
+                    <h3>UI/UX Design</h3>
+                </div>
+                <div class="card-body">
+                    <p>Master Figma and Adobe XD for beautiful interface design</p>
+                    <div class="price-tag">From 150 GHS</div>
+                    <button class="enroll-btn">Enroll Now</button>
+                </div>
+            </div>
+            
+            <div class="course-card">
+                <div class="card-header">
+                    <h3>Cyber Security</h3>
+                </div>
+                <div class="card-body">
+                    <p>Learn ethical hacking and system protection techniques</p>
+                    <div class="price-tag">From 220 GHS</div>
+                    <button class="enroll-btn">Enroll Now</button>
+                </div>
+            </div>
+        </div>
+        
+
+-->
+
+
+
+
+        <div style="text-align: center; margin: 3rem 0;">
+            <h3>Why Choose Our Coding Tutorials?</h3>
+            <p>• Affordable pricing starting at <span class="highlight">130 cedis</span><br>
+               • Practical, project-based learning<br>
+               • Flexible payment plans available<br>
+               • Certificate upon completion</p>
+        </div>
+    </div>
+    
+    <footer>
+        <p>&copy; 2023 AZZ INTERNET HUB. All rights reserved.</p>
+        <p>Coding tutorials starting from 130 GHS</p>
+    </footer>
+
+    <script>
+        // You can add interactive elements here
+        document.querySelectorAll('.enroll-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                const course = btn.closest('.course-card').querySelector('h3').textContent;
+                alert(`Thank you for your interest in our ${course} course! We'll contact you shortly.`);
+            });
+        });
+    </script>
+</body>
+</html>

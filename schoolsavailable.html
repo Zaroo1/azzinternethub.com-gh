@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Available Schools | AzzInternetHub.space</title>
+    <style>
+        /* === GLOBAL STYLES === */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f9ff;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        /* === HEADER === */
+        header {
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            color: white;
+            padding: 40px 0;
+            text-align: center;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+        
+        .logo {
+            font-size: 2.2em;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        
+        .tagline {
+            font-size: 1.1em;
+            opacity: 0.9;
+            margin: 0;
+        }
+        
+        /* === MAIN CONTENT === */
+        .page-title {
+            text-align: center;
+            margin: 40px 0;
+            color: #1e3c72;
+            position: relative;
+        }
+        
+        .page-title:after {
+            content: '';
+            position: absolute;
+            width: 100px;
+            height: 3px;
+            background: #2a5298;
+            bottom: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            border-radius: 3px;
+        }
+        
+        .notice {
+            background-color: #e8f0fe;
+            border-left: 4px solid #2a5298;
+            padding: 15px;
+            margin: 30px 0;
+            border-radius: 0 4px 4px 0;
+        }
+        
+        /* === PRICING TABLE === */
+        .pricing-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 30px 0;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        
+        .pricing-table th {
+            background-color: #2a5298;
+            color: white;
+            padding: 15px;
+            text-align: left;
+        }
+        
+        .pricing-table td {
+            padding: 12px 15px;
+            border-bottom: 1px solid #e0e6f0;
+        }
+        
+        .pricing-table tr:last-child td {
+            border-bottom: none;
+        }
+        
+        .pricing-table tr:hover {
+            background-color: #f8faff;
+        }
+        
+        .price {
+            font-weight: bold;
+            color: #1e3c72;
+        }
+        
+        /* === BUTTONS === */
+        .btn {
+            display: inline-block;
+            background: #2a5298;
+            color: white;
+            padding: 12px 25px;
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s;
+            margin-top: 20px;
+        }
+        
+        .btn:hover {
+            background: #1e3c72;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        
+        /* === FOOTER === */
+        footer {
+            background: #1a1a1a;
+            color: #aaa;
+            text-align: center;
+            padding: 30px 0;
+            margin-top: 50px;
+            font-size: 0.9em;
+        }
+        
+        /* === RESPONSIVE === */
+        @media (max-width: 768px) {
+            .pricing-table {
+                display: block;
+                overflow-x: auto;
+            }
+            
+            .logo {
+                font-size: 1.8em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- HEADER SECTION -->
+    <header>
+        <div class="container">
+            <div class="logo">AzzInternetHub.space</div>
+            <p class="tagline">Your trusted partner for educational services</p>
+        </div>
+    </header>
+    
+    <!-- MAIN CONTENT -->
+    <main class="container">
+        <h1 class="page-title">Available Schools and Prices</h1>
+        
+        <div class="notice">
+            <strong>Note:</strong> All prices include the cost of passport picture and application fees.
+        </div>
+        
+        <table class="pricing-table">
+            <thead>
+                <tr>
+                    <th>Institution</th>
+                    <th>Price (GHS)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>University for Development Studies (UDS)</td>
+                    <td class="price">245</td>
+                </tr>
+                <tr>
+                    <td>Kwame Nkrumah University of Science and Technology (KNUST)</td>
+                    <td class="price">285</td>
+                </tr>
+                <tr>
+                    <td>University of Ghana (Legon)</td>
+                    <td class="price">250</td>
+                </tr>
+                <tr>
+                    <td>Nursing Trainings (MOH)</td>
+                    <td class="price">180</td>
+                </tr>
+                <tr>
+                    <td>Colleges of Education (COE)</td>
+                    <td class="price">390</td>
+                </tr>
+                <tr>
+                    <td>University of Cape Coast (UCC)</td>
+                    <td class="price">255</td>
+                </tr>
+                <tr>
+                    <td>University of Energy and Natural Resources (UENR)</td>
+                    <td class="price">260</td>
+                </tr>
+                <tr>
+                    <td>Ghana Institute of Management and Public Administration (GIMPA)</td>
+                    <td class="price">275</td>
+                </tr>
+                <tr>
+                    <td>University of Professional Studies, Accra (UPSA)</td>
+                    <td class="price">265</td>
+                </tr>
+                <tr>
+                    <td>Ghana Communication Technology University (GCTU)</td>
+                    <td class="price">240</td>
+                </tr>
+                <tr>
+                    <td>University of Health and Allied Sciences (UHAS)</td>
+                    <td class="price">250</td>
+                </tr>
+                <tr>
+                    <td>Technical Universities (All)</td>
+                    <td class="price">220</td>
+                </tr>
+                <tr>
+                    <td>Ghana Institute of Journalism (GIJ)</td>
+                    <td class="price">270</td>
+                </tr>
+                <tr>
+                    <td>Ghana School of Law</td>
+                    <td class="price">350</td>
+                </tr>
+                <tr>
+                    <td>Ghana College of Pharmacists</td>
+                    <td class="price">300</td>
+                </tr>
+                <tr>
+                    <td>Ghana School of Surveying and Mapping</td>
+                    <td class="price">230</td>
+                </tr>
+                <tr>
+                    <td>Kofi Annan International Peacekeeping Training Centre</td>
+                    <td class="price">320</td>
+                </tr>
+                <tr>
+                    <td>Ghana Institute of Languages</td>
+                    <td class="price">210</td>
+                </tr>
+                <tr>
+                    <td>National Film and Television Institute (NAFTI)</td>
+                    <td class="price">240</td>
+                </tr>
+                <tr>
+                    <td>Ghana Institute of Management and Administration (GIMPA) - Short Courses</td>
+                    <td class="price">200</td>
+                </tr>
+            </tbody>
+        </table>
+        
+        <div style="text-align: center;">
+            <a href="index.html" class="btn">Back to Home</a>
+        </div>
+    </main>
+    
+    <!-- FOOTER -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Azz Internet Hub. All rights reserved</p>
+        </div>
+    </footer>
+</body>
+</html>
